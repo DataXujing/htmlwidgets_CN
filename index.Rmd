@@ -13,7 +13,7 @@ description: "这是一个htmlwidgets的中文教程"
 
 # 声明{-}
 
-htmlwidgets是R语言中非常有划时代意义的包，因为有了htmlwidgets使得R语言在交互可视化和Web编程有了实质性的进步。htmlwidgets目前没有中文说明文档和教程，该文档是对官方文档的详细翻译，译者水平有限，读者可以在<https://github.com/DataXujing/htmlwidgets_CN/issues>中留言指正。
+[htmlwidgets](https://CRAN.R-project.org/package=htmlwidgets)是R语言中非常有划时代意义的包，因为有了htmlwidgets使得R语言在交互可视化和基于JavaScript的编程有了实质性的进步。htmlwidgets目前没有中文说明文档和教程，该文档是对官方文档的详细翻译，译者水平有限，读者可以在<https://github.com/DataXujing/htmlwidgets_CN/issues>中留言指正。
 
 ![](libs/pic/cover.png)
 
@@ -50,7 +50,7 @@ Date/Publication 2018-04-19 12:43:03 UTC
 
 <br>
 
-<p style='float:right;'> 联信集团 </p>
+<p style='float:right;'> 联信商务咨询有限公司 </p>
 
 <br>
 
@@ -61,6 +61,9 @@ Date/Publication 2018-04-19 12:43:03 UTC
 **徐静：**
 
 硕士研究生, 目前的研究兴趣主要包括：数理统计，统计机器学习，深度学习，网络爬虫，前端可视化，R语言和Python语言的超级粉丝，多个R包和Python模块的作者，现在正逐步向Java迁移。
+
+Graduate students,the current research interests include: mathematical statistics, statistical machine learning, deep learning, web crawler, front-end visualization.
+He is a super fan of R and Python, and the author of several R packages and Python modules, and now gradually migrating to Java.
 
 
 

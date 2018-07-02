@@ -25,7 +25,7 @@
 <meta name="author" content="徐静 译">
 
 
-<meta name="date" content="2018-07-02">
+<meta name="date" content="2018-07-03">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -159,7 +159,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><p>和shiny结合在一起</p></li>
 <li><p>保存为独立的网页，通过电子邮件，Dropbox等ad-oc共享。</p></li>
 </ul>
-<p>通过遵循一小部分易于尊寻的约定，可以创建非常小的代码和HTML控件，所有控件包含如下部分：</p>
+<p>通过遵循一小部分易于遵循的约定，可以创建非常小的代码和HTML控件，所有控件包含如下部分：</p>
 <ol style="list-style-type: decimal">
 <li><p><em>Dependencies</em>: 这些是控件用到的需要声明的Javascript和CSS</p></li>
 <li><p><em>R binding</em>: 这是终端用户将调用的功能，以向控件提供输入数据，并制定控件应该如何呈现各种选项，这包括在shiny应用程序中使用控件所需要的一些简短的样板功能。</p></li>
@@ -219,7 +219,7 @@ inst/
 |   |   |   |-- plugins/
 |   |   |   |   |-- sigma.parsers.gexf.min.js
 </code></pre>
-<p>请注意，JavaScript,YAML和其他依赖项都包含在inst.htmlwidgets目录中(随后将被安装到一个名为htmlwidgets的包的子目录中)。</p>
+<p>请注意，JavaScript,YAML和其他依赖项都包含在inst/htmlwidgets目录中(随后将被安装到一个名为htmlwidgets的包的子目录中)。</p>
 </div>
 <div id="section-1.3.2" class="section level3">
 <h3><span class="header-section-number">1.3.2</span> 依赖关系</h3>
@@ -379,7 +379,7 @@ server =<span class="st"> </span><span class="cf">function</span>(input, output)
 <p>要创建一个新的控件，可以调用<strong>scaffoldWidget</strong>函数来生成控件的基本结构。函数将：</p>
 <ul>
 <li><p>创建.R,.js,.yaml等控件需要的文件</p></li>
-<li><p>如果提供，取一个[Bower]包名称并自动下载JavaScript库（及其依赖项），并将所需的条目添加到.yAML文件中。</p></li>
+<li><p>如果提供，取一个<a href="https://bower.io/">Bower</a>包名称并自动下载JavaScript库（及其依赖项），并将所需的条目添加到.yaml文件中。</p></li>
 </ul>
 <p>这个方法是非常推荐的，因为它确保你开始使用正确的文件结构。 下面是一个示例，假设您希望在一个新的同名包中创建名为“mywidget”的小部件：</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">devtools<span class="op">::</span><span class="kw">create</span>(<span class="st">&quot;mywidget&quot;</span>)               <span class="co"># create package using devtools</span>
@@ -389,7 +389,7 @@ devtools<span class="op">::</span><span class="kw">install</span>()  </code></pr
 <p>这将创建一个简单的控件，它使用单个文本参数，并在控件HTML元素中显示该文本。你可以这样试试：</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(mywidget)
 <span class="kw">mywidget</span>(<span class="st">&quot;hello, world&quot;</span>)</code></pre></div>
-<p>这是最可能的控件，并且还没有包含一个JavaScript库来连接（注意，scaffoldWidget可以可选地包含通过JavaScript库依赖关系的bowerPkg参数）这是最可能的小部件，并且还没有包含一个JavaScript库来连接（注意，StudioWIDGET可以可选地包含通过JavaScript库依赖关系的POWER PKG参数）。 在开始开发之前，您应该查看上面的介绍性示例，以确保您理解各个组件，并在下一节中查看与文章相关联的附加文章和示例。</p>
+<p>这是最可能的控件，并且还没有包含一个JavaScript库来连接（注意，scaffoldWidget可以可选地包含通过JavaScript库依赖关系的bowerPkg参数）这是最可能的小部件，并且还没有包含一个JavaScript库来连接（注意，scaffoldWidget可以可选地包含通过JavaScript库依赖关系的bowerPkg参数）。 在开始开发之前，您应该查看上面的介绍性示例，以确保您理解各个组件，并在下一节中查看与文章相关联的附加文章和示例。</p>
 </div>
 <div id="section-1.4.3" class="section level3">
 <h3><span class="header-section-number">1.4.3</span> 更多</h3>
@@ -406,9 +406,9 @@ devtools<span class="op">::</span><span class="kw">install</span>()  </code></pr
 <h4><span class="header-section-number">1.4.3.2</span> 例子</h4>
 <p>学习其他包的代码是了解更多关于创建小部件的一个好方法：</p>
 <ul>
-<li><p>networkD3</p></li>
-<li><p>dygraphs</p></li>
-<li><p>sparkline</p></li>
+<li><p><a href="https://CRAN.R-project.org/package=networkD3">networkD3</a></p></li>
+<li><p><a href="https://CRAN.R-project.org/package=dygraphs">dygraphs</a></p></li>
+<li><p><a href="https://github.com/htmlwidgets/sparkline">sparkline</a></p></li>
 </ul>
 </div>
 <div id="section-1.4.3.3" class="section level4">

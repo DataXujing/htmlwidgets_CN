@@ -12,7 +12,7 @@
 
 + 保存为独立的网页，通过电子邮件，Dropbox等ad-oc共享。
 
-通过遵循一小部分易于尊寻的约定，可以创建非常小的代码和HTML控件，所有控件包含如下部分：
+通过遵循一小部分易于遵循的约定，可以创建非常小的代码和HTML控件，所有控件包含如下部分：
 
 1. *Dependencies*: 这些是控件用到的需要声明的Javascript和CSS
 
@@ -100,7 +100,7 @@ inst/
 
 ```
 
-请注意，JavaScript,YAML和其他依赖项都包含在inst.htmlwidgets目录中(随后将被安装到一个名为htmlwidgets的包的子目录中)。
+请注意，JavaScript,YAML和其他依赖项都包含在inst/htmlwidgets目录中(随后将被安装到一个名为htmlwidgets的包的子目录中)。
 
 
 ### 依赖关系
@@ -304,7 +304,7 @@ install.packages("htmlwidgets")
 
 + 创建.R,.js,.yaml等控件需要的文件
 
-+ 如果提供，取一个[Bower]包名称并自动下载JavaScript库（及其依赖项），并将所需的条目添加到.yAML文件中。
++ 如果提供，取一个[Bower](https://bower.io/)包名称并自动下载JavaScript库（及其依赖项），并将所需的条目添加到.yaml文件中。
 
 这个方法是非常推荐的，因为它确保你开始使用正确的文件结构。
 下面是一个示例，假设您希望在一个新的同名包中创建名为“mywidget”的小部件：
@@ -323,7 +323,7 @@ library(mywidget)
 mywidget("hello, world")
 ```
 
-这是最可能的控件，并且还没有包含一个JavaScript库来连接（注意，scaffoldWidget可以可选地包含通过JavaScript库依赖关系的bowerPkg参数）这是最可能的小部件，并且还没有包含一个JavaScript库来连接（注意，StudioWIDGET可以可选地包含通过JavaScript库依赖关系的POWER PKG参数）。
+这是最可能的控件，并且还没有包含一个JavaScript库来连接（注意，scaffoldWidget可以可选地包含通过JavaScript库依赖关系的bowerPkg参数）这是最可能的小部件，并且还没有包含一个JavaScript库来连接（注意，scaffoldWidget可以可选地包含通过JavaScript库依赖关系的bowerPkg参数）。
 在开始开发之前，您应该查看上面的介绍性示例，以确保您理解各个组件，并在下一节中查看与文章相关联的附加文章和示例。
 
 
@@ -345,11 +345,11 @@ mywidget("hello, world")
 
 学习其他包的代码是了解更多关于创建小部件的一个好方法：
 
-+  networkD3 
++  [networkD3](https://CRAN.R-project.org/package=networkD3) 
 
-+  dygraphs
++  [dygraphs](https://CRAN.R-project.org/package=dygraphs )
 
-+  sparkline 
++  [sparkline](https://github.com/htmlwidgets/sparkline)
 
 #### 问题
 
