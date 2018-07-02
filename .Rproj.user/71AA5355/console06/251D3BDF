@@ -427,4 +427,266 @@ $[0K[3G[?25h[0m[0K]0;:/c/Users/Administrator.USER-20170417DX/Desktop/htmlw
 [0K[1A[9G[?25h[?25l$ git add[0K
 [0K[1A[10G[?25h[11G[?25l$ git add .[0K
 [0K[1A[12G[?25h[?25l
-[?25h
+[?25hwarning: LF will be replaced by CRLF in .Rproj.user/71AA5355/pcs/files-pane.pper.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/pcs/source-pane.pper.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/pcs/windowlayoutstate.pper.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/71AA5355/rmd-outputs.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/sources/prop/A2083AED.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/sources/prop/FF162251.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25h[?25l
+[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25hp[0K[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25hm[0K'[0K:[0Ka[0Kr[0Kt[0K:[0K'[0K[?25l
+[0K[?25h[master 3e5b23e] :art:[0K[?25l
+ 13 files changed, 119 insertions(+), 19 deletions(-)[0K
+ delete mode 100644 .Rhistory[0K
+ rewrite .Rproj.user/71AA5355/console06/INDEX001 (86%)[0K
+ create mode 100644 docs/libs/pic/ch1_1.png[0K
+[0K[?25h[?25l
+[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git r[0K[?25he[0Km[0Ko[0Kt[0Ke[0K[14G[?25l$ git remote a[0K[?25hd[0Kd[0K[18G[?25l$ git remote add o[0K[?25hr[0K[?25l$ git remote add o[0K[?25h[?25l$ git remote add[0K[18G[?25h[17G[?25l$ git remote ad[0K[?25h[?25l$ git remote a[0K[?25h[?25l$ git remote[0K[14G[?25h[13G[?25l$ git remot[0K[?25h[?25l$ git remo[0K[?25h[?25l$ git rem[0K[?25h[?25l$ git re[0K[?25h[?25l$ git r[0K[?25h[?25l$ git[0K[7G[?25h[6G[?25l$ gi[0K[?25h[?25l$ g[0K[?25h[?25l$[0K[3G[?25h[?25l$ git commit -m':art:'[0K[?25h[?25l$ git add .[0K[?25h[?25l$ if [ $# -eq 0 ]; then   echo "Start interactive shell";   exec "$BASH" --login -i; else   echo "Start shell with command";   exec "$BASH"[0K
+-c "$*"; fi[0K[?25h[?25l[1A$ export -f docker[0K
+[0K[1A[19G[?25h[?25l$ docker () {   MSYS_NO_PATHCONV=1 docker.exe "$@"; }[0K
+[0K[1A[54G[?25h[?25l$ cd[0K
+[0K[1A[5G[?25h[?25l$ echo[0K
+[0K[1A[7G[?25h[?25l$ echo "For help getting started, check out the docs at https://docs.docker.com"[0K
+[0K[1A[81G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHINE} ip ${VM})${NC}"[0K
+[0K[1A[134G[?25h[?25l$ EOF[0K
+[0K[1A[6G[?25h[?25l$               \____\_______/[0K
+[0K[1A[31G[?25h[?25l$              \    \         __/[0K
+[0K[1A[34G[?25h[?25l$            \______ o           __/[0K
+[0K[1A[37G[?25h[?25l$       ~~~ {~~ ~~~~ ~~~ ~~~~ ~~~ ~ /  ===- ~~~[0K
+[0K[1A[48G[?25h[?25l$            \______ o           __/[0K
+[0K[1A[37G[?25h[?25l$              \    \         __/[0K
+[0K[1A[34G[?25h[?25l$               \____\_______/[0K
+[0K[1A[31G[?25h[?25l$ EOF[0K
+[0K[1A[6G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHINE} ip ${VM})${NC}"[0K
+[0K[1A[134G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHINE} ip ${VM})${NC}[0K
+[0K[1A[133G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHINE} ip ${VM})${NC[0K
+[0K[1A[132G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHINE} ip ${VM})${N[0K
+[0K[1A[131G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHINE} ip ${VM})${[0K
+[0K[1A[130G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHINE} ip ${VM})$[0K
+[0K[1A[129G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHINE} ip ${VM})[0K
+[0K[1A[128G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHINE} ip ${VM}[0K
+[0K[1A[127G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHINE} ip ${VM[0K
+[0K[1A[126G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHINE} ip ${V[0K
+[0K[1A[125G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHINE} ip ${[0K
+[0K[1A[124G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHINE} ip $[0K
+[0K[1A[123G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHINE} ip[0K
+[0K[1A[122G[?25h[121G[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHINE} i[0K
+[0K[1A[120G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHINE}[0K
+[0K[1A[119G[?25h[118G[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHINE[0K
+[0K[1A[117G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHIN[0K
+[0K[1A[116G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACH[0K
+[0K[1A[114G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MA[0K
+[0K[1A[112G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_M[0K
+[0K[1A[111G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_[0K
+[0K[1A[109G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER[0K
+[0K[1A[109G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKE[0K
+[0K[1A[108G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCK[0K
+[0K[1A[107G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOC[0K
+[0K[1A[106G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DO[0K
+[0K[1A[105G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${D[0K
+[0K[1A[104G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${[0K
+[0K[1A[103G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$($[0K
+[0K[1A[102G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$([0K
+[0K[1A[101G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$[0K
+[0K[1A[100G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}[0K
+[0K[1A[99G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN[0K
+[0K[1A[98G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREE[0K
+[0K[1A[97G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GRE[0K
+[0K[1A[96G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GR[0K
+[0K[1A[95G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${G[0K
+[0K[1A[94G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${[0K
+[0K[1A[93G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP $[0K
+[0K[1A[92G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP[0K
+[0K[1A[91G[?25h[90G[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with I[0K
+[0K[1A[89G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with[0K
+[0K[1A[88G[?25h[87G[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine wit[0K
+[0K[1A[86G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine wi[0K
+[0K[1A[85G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine w[0K
+[0K[1A[84G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine[0K
+[0K[1A[83G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machin[0K
+[0K[1A[81G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machi[0K
+[0K[1A[80G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} mach[0K
+[0K[1A[79G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} ma[0K
+[0K[1A[77G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} m[0K
+[0K[1A[76G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC}[0K
+[0K[1A[75G[?25h[74G[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC[0K
+[0K[1A[73G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${N[0K
+[0K[1A[72G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${[0K
+[0K[1A[71G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}$[0K
+[0K[1A[70G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}[0K
+[0K[1A[69G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM[0K
+[0K[1A[68G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${V[0K
+[0K[1A[67G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${[0K
+[0K[1A[66G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}$[0K
+[0K[1A[65G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}[0K
+[0K[1A[64G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN[0K
+[0K[1A[63G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREE[0K
+[0K[1A[62G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GRE[0K
+[0K[1A[61G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GR[0K
+[0K[1A[60G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${G[0K
+[0K[1A[59G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${[0K
+[0K[1A[58G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the $[0K
+[0K[1A[57G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the[0K
+[0K[1A[56G[?25h[55G[?25l$ echo -e "${BLUE}docker${NC} is configured to use th[0K
+[0K[1A[54G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use t[0K
+[0K[1A[53G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use[0K
+[0K[1A[52G[?25h[51G[?25l$ echo -e "${BLUE}docker${NC} is configured to us[0K
+[0K[1A[50G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to u[0K
+[0K[1A[49G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to[0K
+[0K[1A[48G[?25h[47G[?25l$ echo -e "${BLUE}docker${NC} is configured t[0K
+[0K[1A[46G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured[0K
+[0K[1A[45G[?25h[44G[?25l$ echo -e "${BLUE}docker${NC} is configure[0K
+[0K[1A[43G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configur[0K
+[0K[1A[41G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configu[0K
+[0K[1A[41G[?25h[?25l$ echo -e "${BLUE}docker${NC} is config[0K
+[0K[1A[40G[?25h[?25l$ echo -e "${BLUE}docker${NC} is confi[0K
+[0K[1A[39G[?25h[?25l$ echo -e "${BLUE}docker${NC} is conf[0K
+[0K[1A[38G[?25h[?25l$ echo -e "${BLUE}docker${NC} is con[0K
+[0K[1A[37G[?25h[?25l$ echo -e "${BLUE}docker${NC} is co[0K
+[0K[1A[36G[?25h[?25l$ echo -e "${BLUE}docker${NC} is c[0K
+[0K[1A[35G[?25h[?25l$ echo -e "${BLUE}docker${NC} is[0K
+[0K[1A[34G[?25h[33G[?25l$ echo -e "${BLUE}docker${NC} i[0K
+[0K[1A[32G[?25h[?25l$ echo -e "${BLUE}docker${NC}[0K
+[0K[1A[31G[?25h[30G[?25l$ echo -e "${BLUE}docker${NC[0K
+[0K[1A[29G[?25h[?25l$ echo -e "${BLUE}docker${N[0K
+[0K[1A[28G[?25h[?25l$ echo -e "${BLUE}docker${[0K
+[0K[1A[27G[?25h[?25l$ echo -e "${BLUE}docker$[0K
+[0K[1A[26G[?25h[?25l$ echo -e "${BLUE}docker[0K
+[0K[1A[25G[?25h[?25l$ echo -e "${BLUE}docke[0K
+[0K[1A[24G[?25h[?25l$ echo -e "${BLUE}dock[0K
+[0K[1A[23G[?25h[?25l$ echo -e "${BLUE}doc[0K
+[0K[1A[22G[?25h[?25l$ echo -e "${BLUE}do[0K
+[0K[1A[21G[?25h[?25l$ echo -e "${BLUE}d[0K
+[0K[1A[20G[?25h[?25l$ echo -e "${BLUE}[0K
+[0K[1A[19G[?25h[?25l$ echo -e "${BLUE[0K
+[0K[1A[18G[?25h[?25l$ echo -e "${BLU[0K
+[0K[1A[17G[?25h[?25l$ echo -e "${BL[0K
+[0K[1A[16G[?25h[?25l$ echo -e "${B[0K
+[0K[1A[15G[?25h[?25l$ echo -e "${[0K
+[0K[1A[14G[?25h[?25l$ echo -e "$[0K
+[0K[1A[13G[?25h[?25l$ echo -e "[0K
+[0K[1A[12G[?25h[?25l$ echo -e[0K
+[0K[1A[11G[?25h[10G[?25l$ echo -[0K
+[0K[1A[9G[?25h[?25l$ echo[0K
+[0K[1A[8G[?25h[7G[?25l$ ech[0K
+[0K[1A[6G[?25h[?25l$ ec[0K
+[0K[1A[5G[?25h[?25l$ e[0K
+[0K[1A[4G[?25h[?25l$[0K
+[0K[1A[3G[?25h[?25l$ g[0K
+[0K[1A[4G[?25h[?25l$ gi[0K
+[0K[1A[5G[?25h[?25l$ git[0K
+[0K[1A[6G[?25h[7G[?25l$ git t[0K
+[0K[1A[8G[?25h[?25l$ git[0K
+[0K[1A[7G[?25h[?25l$ git r[0K
+[0K[1A[8G[?25h[?25l$ git re[0K
+[0K[1A[9G[?25h[?25l$ git rem[0K
+[0K[1A[10G[?25h[?25l$ git remo[0K
+[0K[1A[11G[?25h[?25l$ git remot[0K
+[0K[1A[12G[?25h[?25l$ git remote[0K
+[0K[1A[13G[?25h[14G[?25l$ git remote a[0K
+[0K[1A[15G[?25h[?25l$ git remote ad[0K
+[0K[1A[16G[?25h[?25l$ git remote add[0K
+[0K[1A[17G[?25h[18G[?25l$ git remote add o[0K
+[0K[1A[19G[?25h[?25l$ git remote add or[0K
+[0K[1A[20G[?25h[?25l$ git remote add ori[0K
+[0K[1A[21G[?25h[?25l$ git remote add orig[0K
+[0K[1A[22G[?25h[?25l$ git remote add origi[0K
+[0K[1A[23G[?25h[?25l$ git remote add origin[0K
+[0K[1A[24G[?25h[25G[?25l$ git remote add origin h[0K
+[0K[1A[26G[?25h[?25l$ git remote add origin ht[0K
+[0K[1A[27G[?25h[?25l$ git remote add origin htt[0K
+[0K[1A[28G[?25h[?25l$ git remote add origin http[0K
+[0K[1A[29G[?25h[?25l$ git remote add origin https[0K
+[0K[1A[30G[?25h[?25l$ git remote add origin https:[0K
+[0K[1A[31G[?25h[?25l$ git remote add origin https:/[0K
+[0K[1A[32G[?25h[?25l$ git remote add origin https://[0K
+[0K[1A[33G[?25h[?25l$ git remote add origin https://f[0K
+[0K[1A[34G[?25h[?25l$ git remote add origin https://fi[0K
+[0K[1A[35G[?25h[?25l$ git remote add origin https://fit[0K
+[0K[1A[36G[?25h[?25l$ git remote add origin https://fi[0K
+[0K[1A[35G[?25h[?25l$ git remote add origin https://f[0K
+[0K[1A[34G[?25h[?25l$ git remote add origin https://[0K
+[0K[1A[33G[?25h[?25l$ git remote add origin https://g[0K
+[0K[1A[34G[?25h[?25l$ git remote add origin https://gi[0K
+[0K[1A[35G[?25h[?25l$ git remote add origin https://git[0K
+[0K[1A[36G[?25h[?25l$ git remote add origin https://gith[0K
+[0K[1A[37G[?25h[?25l$ git remote add origin https://githu[0K
+[0K[1A[38G[?25h[?25l$ git remote add origin https://github[0K
+[0K[1A[39G[?25h[?25l$ git remote add origin https://github.[0K
+[0K[1A[40G[?25h[?25l$ git remote add origin https://github.c[0K
+[0K[1A[41G[?25h[?25l$ git remote add origin https://github.co[0K
+[0K[1A[42G[?25h[?25l$ git remote add origin https://github.com[0K
+[0K[1A[43G[?25h[?25l$ git remote add origin https://github.com/[0K
+[0K[1A[44G[?25h[?25l$ git remote add origin https://github.com/D[0K
+[0K[1A[45G[?25h[?25l$ git remote add origin https://github.com/Da[0K
+[0K[1A[46G[?25h[?25l$ git remote add origin https://github.com/Dat[0K
+[0K[1A[47G[?25h[?25l$ git remote add origin https://github.com/Data[0K
+[0K[1A[48G[?25h[?25l$ git remote add origin https://github.com/DataX[0K
+[0K[1A[49G[?25h[?25l$ git remote add origin https://github.com/DataXu[0K
+[0K[1A[50G[?25h[?25l$ git remote add origin https://github.com/DataXuj[0K
+[0K[1A[51G[?25h[?25l$ git remote add origin https://github.com/DataXuji[0K
+[0K[1A[52G[?25h[?25l$ git remote add origin https://github.com/DataXujin[0K
+[0K[1A[53G[?25h[?25l$ git remote add origin https://github.com/DataXujing[0K
+[0K[1A[54G[?25h[?25l$ git remote add origin https://github.com/DataXujing/[0K
+[0K[1A[55G[?25h[?25l$ git remote add origin https://github.com/DataXujing/h[0K
+[0K[1A[56G[?25h[?25l$ git remote add origin https://github.com/DataXujing/hr[0K
+[0K[1A[57G[?25h[?25l$ git remote add origin https://github.com/DataXujing/h[0K
+[0K[1A[56G[?25h[?25l$ git remote add origin https://github.com/DataXujing/ht[0K
+[0K[1A[57G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htm[0K
+[0K[1A[58G[?25h[?25l$ git remote add origin https://github.com/DataXujing/html[0K
+[0K[1A[59G[?25h[?25l$ git remote add origin https://github.com/DataXujing/html.[0K
+[0K[1A[60G[?25h[?25l$ git remote add origin https://github.com/DataXujing/html[0K
+[0K[1A[59G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlw[0K
+[0K[1A[60G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwi[0K
+[0K[1A[61G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwid[0K
+[0K[1A[62G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidg[0K
+[0K[1A[63G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidge[0K
+[0K[1A[64G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidget[0K
+[0K[1A[65G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets[0K
+[0K[1A[66G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets_[0K
+[0K[1A[67G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets_C[0K
+[0K[1A[68G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets_CN[0K
+[0K[1A[69G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets_CN.[0K
+[0K[1A[70G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets_CN.g[0K
+[0K[1A[71G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets_CN.gi[0K
+[0K[1A[72G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets_CN.git[0K
+[0K[1A[73G[?25h[?25l
+[?25hfatal: remote origin already exists.[0K[?25l
+[0K[?25h[?25l
+[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git r[0K[?25he[0Km[0Ko[0Kt[0Ke[0K[14G[?25l$ git remote r[0K[?25hm[0K[17G[?25l$ git remote rm o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[?25l
+[0K[?25h[?25l
+[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ git remote rm origin[0K[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets_CN.git[0K[?25h[?25l
+[0K[?25h[?25l
+[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Ks[0Kh[0K[12G[?25l$ git push -[0K[?25hu[0K[15G[?25l$ git push -u o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[22G[?25l$ git push -u origin m[0K[?25ha[0Ks[0Kt[0Ke[0Kr[0K[?25l
+[0K[?25hfatal: HttpRequestException encountered.[0K[?25l
+   发送请求时出错。[0K
+[0K[?25herror: cannot spawn rpostback-askpass: No such file or directory[0K[?25l
+[0K[?25hUsername for 'https://github.com':[0K[36G[?25lUsername for 'https://github.com': D[0K[?25ha[0Kt[0Ka[0KX[0Ku[0Kj[0Ki[0Kn[0Kg[0K[?25l
+[0K[?25herror: cannot spawn rpostback-askpass: No such file or directory[0K[?25l
+[0K[?25hPassword for 'https://DataXujing@github.com':[0K[47G[?25l
+[0K[?25hCounting objects: 27, done.[0K[?25l
+Delta compression using up to 4 threads.[0K
+Compressing objects: 100% (21/21), done.[0K
+Writing objects: 100% (27/27), 3.28 KiB | 838.00 KiB/s, done.[0K
+Total 27 (delta 11), reused 0 (delta 0)[0K
+[0K[?25h[?25lremote: Resolving deltas:   9% (1/11)[0K[1G[?25hremote: Resolving deltas: 100% (11/11), completed with 11 local objects.[0K[?25l
+[0K[?25hTo https://github.com/DataXujing/htmlwidgets_CN.git[0K[?25l
+   115a2cb..3e5b23e  master -> master[0K
+[0K[?25hBranch master set up to track remote branch master from origin.[0K[?25l
+[0K[?25h[?25l
+[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
+$[0K[3G[?25h[0m[0K]0;:/c/Users/Administrator.USER-20170417DX/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[?25l
+[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
+[?25l$ g[0K[?25ht[0K[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25h[?25l
+[0K[?25h
