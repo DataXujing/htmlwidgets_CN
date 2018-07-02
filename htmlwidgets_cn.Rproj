@@ -13,4 +13,4 @@ RnwWeave: knitr
 LaTeX: XeLaTeX
 
 BuildType: Website
-WebsitePath: C:/Users/Administrator.USER-20170417DX/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn
+WebsitePath: C:/Users/xujing.LAPTOP-LLR84L1D/Desktop/htmlwidgets_CN

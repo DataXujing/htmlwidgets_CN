@@ -3,4 +3,5 @@ output_dir: 'docs'
 delete_merged_file: true
 language:
   ui:
+    edit: "编辑"
     chapter_name: ["第 ", " 章"]
