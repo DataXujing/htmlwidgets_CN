@@ -219,4 +219,107 @@ $[0K[3G[?25h[?25l$ git push -u origin master[0K[?25h[?25l$ git remote a
 [0K[?25h[?25l
 [0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
 $[0K[3G[?25h[?25l$ git init[0K[?25h[?25l$ git push -u origin master[0K[?25h[1G$ git remote add origin https://github.com/DataXujing/htmlwidgets_CN.git[0K[?25l$ git commit -m':art:'[0K[?25h[?25l$ git add .[0K[?25h[?25l
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/71AA5355/build_options.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in docs/libs/gitbook-2.6.7/css/plugin-bookdown.css.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in docs/libs/gitbook-2.6.7/css/plugin-fontsettings.css.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in docs/libs/gitbook-2.6.7/css/plugin-highlight.css.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in docs/libs/gitbook-2.6.7/css/plugin-search.css.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in docs/libs/gitbook-2.6.7/css/style.css.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in docs/libs/gitbook-2.6.7/js/app.min.js.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in docs/libs/gitbook-2.6.7/js/jquery.highlight.js.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in docs/libs/gitbook-2.6.7/js/lunr.js.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in docs/libs/gitbook-2.6.7/js/plugin-bookdown.js.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in docs/libs/gitbook-2.6.7/js/plugin-fontsettings.js.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in docs/libs/gitbook-2.6.7/js/plugin-search.js.[0K
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in docs/libs/gitbook-2.6.7/js/plugin-sharing.js.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25hwarning: LF will be replaced by CRLF in docs/libs/jquery-2.2.3/jquery.min.js.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+warning: LF will be replaced by CRLF in docs/style.css.[0K
+The file will have its original line endings in your working directory.[0K
+[0K[?25h[?25l
+[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ git add .[0K[?25h[?25l$ git init[0K[?25h[?25l$ git push -u origin master[0K[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets_CN.git[0K[?25h[?25l$ git commit -m':art:'[0K[?25h[?25l
+[0K[?25h[master e112fc8] :art:[0K[?25l
+ 31 files changed, 3137 insertions(+), 1 deletion(-)[0K
+ rename {_book => docs}/_bookdown_files/htmlwidgets_cn_files/figure-html/ch1_1.png (100%)[0K
+ rename {_book => docs}/e585b3e4ba8ee8af91e88085.html (100%)[0K
+ rename {_book => docs}/e5ba8fe8a880.html (100%)[0K
+ rename "_book/htmlwidgets\345\214\205\347\232\204\347\277\273\350\257\221.html" => "docs/htmlwidgets\345\214\205\347\232\204\347\277\273\35[0K0
+\257\221.html" (100%)[0K
+ rename "_book/htmlwidgets\347\256\200\344\273\213.html" => "docs/htmlwidgets\347\256\200\344\273\213.html" (100%)[0K
+ rename "_book/htmlwidgets\350\277\233\351\230\266.html" => "docs/htmlwidgets\350\277\233\351\230\266.html" (100%)[0K
+ rename {_book => docs}/index.html (100%)[0K
+ rename {_book => docs}/libs/gitbook-2.6.7/css/fontawesome/fontawesome-webfont.ttf (100%)[0K
+ rename {_book => docs}/libs/gitbook-2.6.7/css/plugin-bookdown.css (100%)[0K
+ rename {_book => docs}/libs/gitbook-2.6.7/css/plugin-fontsettings.css (100%)[0K
+ rename {_book => docs}/libs/gitbook-2.6.7/css/plugin-highlight.css (100%)[0K
+ rename {_book => docs}/libs/gitbook-2.6.7/css/plugin-search.css (100%)[0K
+ rename {_book => docs}/libs/gitbook-2.6.7/css/style.css (100%)[0K
+ rename {_book => docs}/libs/gitbook-2.6.7/js/app.min.js (100%)[0K
+ rename {_book => docs}/libs/gitbook-2.6.7/js/jquery.highlight.js (100%)[0K
+ rename {_book => docs}/libs/gitbook-2.6.7/js/lunr.js (100%)[0K
+ rename {_book => docs}/libs/gitbook-2.6.7/js/plugin-bookdown.js (100%)[0K
+ rename {_book => docs}/libs/gitbook-2.6.7/js/plugin-fontsettings.js (100%)[0K
+ rename {_book => docs}/libs/gitbook-2.6.7/js/plugin-search.js (100%)[0K
+ rename {_book => docs}/libs/gitbook-2.6.7/js/plugin-sharing.js (100%)[0K
+ rename {_book => docs}/libs/jquery-2.2.3/jquery.min.js (100%)[0K
+ rename {_book => docs}/search_index.json (100%)[0K
+ rename {_book => docs}/section-5.html (100%)[0K
+ rename {_book => docs}/section-6.html (100%)[0K
+ rename {_book => docs}/sizinghtmlwidgets-sizing.html (100%)[0K
+ rename {_book => docs}/style.css (100%)[0K
+ create mode 100644 htmlwidgets_cn.log[0K
+ create mode 100644 htmlwidgets_cn.pdf[0K
+ create mode 100644 htmlwidgets_cn.tex[0K
+[0K[?25h[?25l
+[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ git commit -m':art:'[0K[?25h[?25l$ git add .[0K[?25h[?25l$ git init[0K[?25h[?25l$ git push -u origin master[0K[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets_CN.git[0K[?25h[?25l
+[0K[?25hfatal: remote origin already exists.[0K[?25l
+[0K[?25h[?25l
+[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git r[0K[?25he[0Km[0Ko[0Kt[0Ke[0K[14G[?25l$ git remote r[0K[?25hm[0K[17G[?25l$ git remote rm o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[?25l
+[0K[?25h[?25l
+[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ git remote rm origin[0K[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets_CN.git[0K[?25h[?25l
+[0K[?25h[?25l
+[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets_CN.git[0K[?25h[?25l$ git remote rm origin[0K[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets_CN.git[0K[?25h[?25l$ git commit -m':art:'[0K[?25h[?25l$ git add .[0K[?25h[?25l$ git init[0K[?25h[?25l$ git push -u origin master[0K[?25h[?25l
+[0K[?25hfatal: HttpRequestException encountered.[0K[?25l
+   发送请求时出错。[0K
+[0K[?25herror: cannot spawn rpostback-askpass: No such file or directory[0K[?25l
+[0K[?25hUsername for 'https://github.com':[0K[36G[?25lUsername for 'https://github.com': D[0K[?25ha[0Kt[0Ka[0KX[0Ku[0Kj[0Ki[0Kn[0Kg[0K[?25l
+[0K[?25herror: cannot spawn rpostback-askpass: No such file or directory[0K[?25l
+[0K[?25hPassword for 'https://DataXujing@github.com':[0K[47G[?25l
+[0K[?25hCounting objects: 10, done.[0K[?25l
+Delta compression using up to 4 threads.[0K
+Compressing objects: 100% (10/10), done.[0K
+Writing objects: 100% (10/10), 54.83 KiB | 9.14 MiB/s, done.[0K
+Total 10 (delta 3), reused 0 (delta 0)[0K
+[0K[?25h[?25lremote: Resolving deltas:  66% (2/3)[0K[1G[?25hremote: Resolving deltas: 100% (3/3), completed with 3 local objects.[0K[?25l
+[0K[?25hTo https://github.com/DataXujing/htmlwidgets_CN.git[0K[?25l
+   582ad69..e112fc8  master -> master[0K
+[0K[?25hBranch master set up to track remote branch master from origin.[0K[?25l
+[0K[?25h[?25l
+[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
+$[0K[3G[?25h[0m[0K]0;:/c/Users/Administrator.USER-20170417DX/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[?25l
+[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
+[?25l[0K[?25h$ g[0Ki[0Kt[0K[7G[?25l$ git i[0K[?25hn[0Ki[0Kt[0K[?25l
+[0K[?25hReinitialized existing Git repository in C:/Users/Administrator.USER-20170417DX/Des[0Kk[?25l
+top/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn/.git/[0K
+[0K[?25h[?25l
+[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25h[?25l
 [0K[?25h

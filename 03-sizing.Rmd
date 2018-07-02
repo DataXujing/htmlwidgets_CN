@@ -1,3 +1,3 @@
-# Sizing{#htmlwidgets Sizing}
+# Sizing {#htmlwidgets Sizing}
 
 Sizing
