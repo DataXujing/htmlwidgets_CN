@@ -168,7 +168,7 @@ renderSigma <- function(expr, env = parent.frame(), quoted = FALSE) {
 
 ```
 
-### JavaScript绑定(JavaScript bing)
+### JavaScript绑定(JavaScript binding)
 
 注意：在htmlwidgets0.5.2和更早的版本中使用了一个更老、更不直观的JavaScript绑定API，并在htmlwidgets的更新版本中继续支持。有关遗留绑定API的详细信息，请参见此归档版本。新的控件件被鼓励使用下面描述的更新的API。谜题中的第三个部分是激活控件所需的JavaScript。按照惯例，我们将在文件inst/htmlwidgets/sigma.js中定义JavaScript绑定。下面是绑定的完整源代码：
 
