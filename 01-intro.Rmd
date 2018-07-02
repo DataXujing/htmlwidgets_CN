@@ -72,7 +72,7 @@ data <- system.file("examples/ediaspora.gexf.xml", package = "sigma")
 sigma(data)
 ```
 
-![](libs/pic/ch1_1.png)
+![](pic/ch1_1.png)
 
 注意上面的输出仅仅是一个静态图像，你可以按照下文的Demo做一个交互的版本。
 
