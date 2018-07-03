@@ -124,7 +124,7 @@
   \postauthor{\par}
   \predate{\centering\large\emph}
   \postdate{\par}
-  \date{2018-07-03}
+  \date{2018-07-04}
 
 \usepackage{booktabs}
 \usepackage{xeCJK}
@@ -634,7 +634,36 @@ Widget Sizing就显得尤为重要。
 
 \chapter{HTML空间尺寸调整}\label{htmlwidgets-Sizing}
 
-正在翻译中\ldots{}
+\section{概述}
+
+在HTML控件的工作中，就像R中的绘图(plot)，HTML控件智能的将他们自己的大小放在容器中，无论是在Rstudio
+Viewer中，knitr中的图还是在Shiny
+UI中的面板。\textbf{htmlwidgets}框架提供了一种丰富的机制来指定控件的大小调整行为。
+
+这种大小调整机制是为了解决影响控件的自然尺寸的以下约束：
+
+\begin{itemize}
+\item
+  \textbf{The kind of widget it
+  is}.有些控件可能仅仅需要设计成小的，固定尺寸(例如\href{https://github.com/htmlwidgets/sparkline}{sparkline}),而有些控件可能需要基于像素点做不断地调整(例如\href{http://christophergandrud.github.io/networkD3/}{network
+  graphs})
+\item
+  \textbf{The context into which the widget is rendered.}有些控件在R
+  Markdown中看起来是以
+  \(980px \times 480px\),相同的控件在Rstudio的Viewer中看起来要小的多。
+\end{itemize}
+
+分两步处理控件的大小：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  首先为控件指定大小调整策略，这是通过createWidget函数中的sizingPolicy参数实现的。大多数控件可以接受默认的大小调整策略((或者只覆盖其中的一个或两个方面）并获得满意的大小调整行为（详见下文）。)
+\item
+  框架使用大小调整策略来计算给定的窗口中所呈现的窗口的正确宽度和高度。然后将其大小信息传递给控件JavaScript绑定的初始化和调整大小方法。控件将大小的信息传递给底层的JS库。
+\end{enumerate}
+
+\section{指定大小调整策略}
 
 \chapter{HTML控件：高级主题}\label{htmlwidgets-advanced}
 

@@ -25,7 +25,7 @@
 <meta name="author" content="徐静 译">
 
 
-<meta name="date" content="2018-07-03">
+<meta name="date" content="2018-07-04">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -123,7 +123,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="1.4.3" data-path="htmlwidgets-intro.html"><a href="htmlwidgets-intro.html#section-1.4.3"><i class="fa fa-check"></i><b>1.4.3</b> 更多</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="htmlwidgets-Sizing.html"><a href="htmlwidgets-Sizing.html"><i class="fa fa-check"></i><b>2</b> HTML空间尺寸调整</a></li>
+<li class="chapter" data-level="2" data-path="htmlwidgets-Sizing.html"><a href="htmlwidgets-Sizing.html"><i class="fa fa-check"></i><b>2</b> HTML空间尺寸调整</a><ul>
+<li class="chapter" data-level="2.1" data-path="htmlwidgets-Sizing.html"><a href="htmlwidgets-Sizing.html#section-2.1"><i class="fa fa-check"></i><b>2.1</b> 概述</a></li>
+<li class="chapter" data-level="2.2" data-path="htmlwidgets-Sizing.html"><a href="htmlwidgets-Sizing.html#section-2.2"><i class="fa fa-check"></i><b>2.2</b> 指定大小调整策略</a></li>
+</ul></li>
 <li class="chapter" data-level="3" data-path="htmlwidgets-advanced.html"><a href="htmlwidgets-advanced.html"><i class="fa fa-check"></i><b>3</b> HTML控件：高级主题</a></li>
 <li class="chapter" data-level="4" data-path="htmlwidgets-pkgintro.html"><a href="htmlwidgets-pkgintro.html"><i class="fa fa-check"></i><b>4</b> htmlwidgets包中函数的总结</a></li>
 <li class="chapter" data-level="5" data-path="summary.html"><a href="summary.html"><i class="fa fa-check"></i><b>5</b> 总结</a></li>
@@ -150,8 +153,24 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="htmlwidgets-Sizing" class="section level1">
 <h1><span class="header-section-number">第 2 章</span> HTML空间尺寸调整</h1>
-<p>正在翻译中…</p>
+<div id="section-2.1" class="section level2">
+<h2><span class="header-section-number">2.1</span> 概述</h2>
+<p>在HTML控件的工作中，就像R中的绘图(plot)，HTML控件智能的将他们自己的大小放在容器中，无论是在Rstudio Viewer中，knitr中的图还是在Shiny UI中的面板。<strong>htmlwidgets</strong>框架提供了一种丰富的机制来指定控件的大小调整行为。</p>
+<p>这种大小调整机制是为了解决影响控件的自然尺寸的以下约束：</p>
+<ul>
+<li><p><strong>The kind of widget it is</strong>.有些控件可能仅仅需要设计成小的，固定尺寸(例如<a href="https://github.com/htmlwidgets/sparkline">sparkline</a>),而有些控件可能需要基于像素点做不断地调整(例如<a href="http://christophergandrud.github.io/networkD3/">network graphs</a>)</p></li>
+<li><p><strong>The context into which the widget is rendered.</strong>有些控件在R Markdown中看起来是以 <span class="math inline">\(980px \times 480px\)</span>,相同的控件在Rstudio的Viewer中看起来要小的多。</p></li>
+</ul>
+<p>分两步处理控件的大小：</p>
+<ol style="list-style-type: decimal">
+<li><p>首先为控件指定大小调整策略，这是通过createWidget函数中的sizingPolicy参数实现的。大多数控件可以接受默认的大小调整策略((或者只覆盖其中的一个或两个方面）并获得满意的大小调整行为（详见下文）。)</p></li>
+<li><p>框架使用大小调整策略来计算给定的窗口中所呈现的窗口的正确宽度和高度。然后将其大小信息传递给控件JavaScript绑定的初始化和调整大小方法。控件将大小的信息传递给底层的JS库。</p></li>
+</ol>
+</div>
+<div id="section-2.2" class="section level2">
+<h2><span class="header-section-number">2.2</span> 指定大小调整策略</h2>
 
+</div>
 </div>
             </section>
 
@@ -200,6 +219,19 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
