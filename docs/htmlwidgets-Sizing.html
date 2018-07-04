@@ -25,7 +25,7 @@
 <meta name="author" content="徐静 译">
 
 
-<meta name="date" content="2018-07-04">
+<meta name="date" content="2018-07-05">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -125,10 +125,27 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="2" data-path="htmlwidgets-Sizing.html"><a href="htmlwidgets-Sizing.html"><i class="fa fa-check"></i><b>2</b> HTML空间尺寸调整</a><ul>
 <li class="chapter" data-level="2.1" data-path="htmlwidgets-Sizing.html"><a href="htmlwidgets-Sizing.html#section-2.1"><i class="fa fa-check"></i><b>2.1</b> 概述</a></li>
-<li class="chapter" data-level="2.2" data-path="htmlwidgets-Sizing.html"><a href="htmlwidgets-Sizing.html#section-2.2"><i class="fa fa-check"></i><b>2.2</b> 指定大小调整策略</a></li>
+<li class="chapter" data-level="2.2" data-path="htmlwidgets-Sizing.html"><a href="htmlwidgets-Sizing.html#section-2.2"><i class="fa fa-check"></i><b>2.2</b> 指定大小调整策略</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="htmlwidgets-Sizing.html"><a href="htmlwidgets-Sizing.html#-1"><i class="fa fa-check"></i><b>2.2.1</b> 例子</a></li>
+<li class="chapter" data-level="2.2.2" data-path="htmlwidgets-Sizing.html"><a href="htmlwidgets-Sizing.html#section-2.2.2"><i class="fa fa-check"></i><b>2.2.2</b> 可用选项</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="htmlwidgets-advanced.html"><a href="htmlwidgets-advanced.html"><i class="fa fa-check"></i><b>3</b> HTML控件：高级主题</a></li>
-<li class="chapter" data-level="4" data-path="htmlwidgets-pkgintro.html"><a href="htmlwidgets-pkgintro.html"><i class="fa fa-check"></i><b>4</b> htmlwidgets包中函数的总结</a></li>
+<li class="chapter" data-level="2.3" data-path="htmlwidgets-Sizing.html"><a href="htmlwidgets-Sizing.html#javascript"><i class="fa fa-check"></i><b>2.3</b> JavaScript调整大小方法</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="htmlwidgets-Sizing.html"><a href="htmlwidgets-Sizing.html#-2"><i class="fa fa-check"></i><b>2.3.1</b> 例子</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="htmlwidgets-advanced.html"><a href="htmlwidgets-advanced.html"><i class="fa fa-check"></i><b>3</b> HTML控件：高级主题</a><ul>
+<li class="chapter" data-level="3.1" data-path="htmlwidgets-Sizing.html"><a href="htmlwidgets-Sizing.html#-1"><i class="fa fa-check"></i><b>3.1</b> 概述</a></li>
+<li class="chapter" data-level="3.2" data-path="htmlwidgets-advanced.html"><a href="htmlwidgets-advanced.html#section-3.2"><i class="fa fa-check"></i><b>3.2</b> 数据变换</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="htmlwidgets-advanced.html"><a href="htmlwidgets-advanced.html#htmlwidgets.dataframetod3"><i class="fa fa-check"></i><b>3.2.1</b> HTMLWidgets.dataframeToD3()</a></li>
+<li class="chapter" data-level="3.2.2" data-path="htmlwidgets-advanced.html"><a href="htmlwidgets-advanced.html#htmlwidgets.transposearray2d"><i class="fa fa-check"></i><b>3.2.2</b> HTMLWidgets.transposeArray2D()</a></li>
+<li class="chapter" data-level="3.2.3" data-path="htmlwidgets-advanced.html"><a href="htmlwidgets-advanced.html#json"><i class="fa fa-check"></i><b>3.2.3</b> 自定义JSON串行化器</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="htmlwidgets-Sizing.html"><a href="htmlwidgets-Sizing.html#javascript"><i class="fa fa-check"></i><b>3.3</b> 传递JavaScript函数</a></li>
+<li class="chapter" data-level="3.4" data-path="htmlwidgets-advanced.html"><a href="htmlwidgets-advanced.html#html"><i class="fa fa-check"></i><b>3.4</b> 自定义控件HTML</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="htmlwidgets-pkgintro.html"><a href="htmlwidgets-pkgintro.html"><i class="fa fa-check"></i><b>4</b> htmlwidgets包中函数的总结</a><ul>
+<li class="chapter" data-level="4.1" data-path="htmlwidgets-pkgintro.html"><a href="htmlwidgets-pkgintro.html#htmlwidgets"><i class="fa fa-check"></i><b>4.1</b> htmlwidgets包函数</a></li>
+</ul></li>
 <li class="chapter" data-level="5" data-path="summary.html"><a href="summary.html"><i class="fa fa-check"></i><b>5</b> 总结</a></li>
 <li class="chapter" data-level="6" data-path="reference.html"><a href="reference.html"><i class="fa fa-check"></i><b>6</b> 参考文献</a></li>
 <li class="divider"></li>
@@ -169,7 +186,180 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="section-2.2" class="section level2">
 <h2><span class="header-section-number">2.2</span> 指定大小调整策略</h2>
+<p>默认HTML窗口大小调整策略使用与R图相同大小的语义来处理控件。当在R控制台上打印时，窗口小部件显示在RStudio Viewer中，并且大小以填充查看器窗格（模数任何填充）。当在R Markdown文档中呈现时，控件大小基于默认的图片文件的大小。</p>
+<p>需要注意的是对于大多数的控件来说默认的大小是很不错的选择，你不需要去创建一个大小调整的策略。如果你想轻微的修改大小策略，使得与默认的不同，那么你可以调用sizingPolicy函数，然后把结果传递给createWidget函数。例如：</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">htmlwidgets<span class="op">::</span><span class="kw">createWidget</span>(
+  <span class="st">&quot;sigma&quot;</span>, 
+  x, 
+  <span class="dt">width =</span> width, 
+  <span class="dt">height =</span> height,
+  <span class="dt">sizingPolicy =</span> htmlwidgets<span class="op">::</span><span class="kw">sizingPolicy</span>(
+    <span class="dt">viewer.padding =</span> <span class="dv">0</span>,
+    <span class="dt">viewer.paneHeight =</span> <span class="dv">500</span>,
+    <span class="dt">browser.fill =</span> <span class="ot">TRUE</span>
+  )
+)</code></pre></div>
+<div id="-1" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> 例子</h3>
+<p><a href="http://christophergandrud.github.io/networkD3/">networkD3</a>包对所有的控件直接使用了自定义的大小策略，simpleNetwork控件消除填充（因为D3已经提供填充），并且指定当它在一个独立的Web浏览器中显示时，它希望填充尽可能多的空间：</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sizingPolicy</span>(<span class="dt">padding =</span> <span class="dv">0</span>, <span class="dt">browser.fill =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<p>sankeyNetwork控件需要比Rstudio Viewer提供的更多的空间或典型的knitr图片，因此它禁用了那些自动调整大小的行为。针对于knitr文档他还提供了一个恰当的默认的宽和高：</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sizingPolicy</span>(<span class="dt">viewer.suppress =</span> <span class="ot">TRUE</span>,
+             <span class="dt">knitr.figure =</span> <span class="ot">FALSE</span>,
+             <span class="dt">browser.fill =</span> <span class="ot">TRUE</span>,
+             <span class="dt">browser.padding =</span> <span class="dv">75</span>,
+             <span class="dt">knitr.defaultWidth =</span> <span class="dv">800</span>,
+             <span class="dt">knitr.defaultHeight =</span> <span class="dv">500</span>)</code></pre></div>
+</div>
+<div id="section-2.2.2" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> 可用选项</h3>
+<p>以下是在大小调整策略中可以指定的各种选项：</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Option</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">defaultWidth</td>
+<td align="left">The default width used to display the widget. This parameter specifies the default width for viewing in all contexts (browser, viewer, and knitr) unless it is specifically overridden with e.g. browser.defaultWidth.</td>
+</tr>
+<tr class="even">
+<td align="left">defaultHeight</td>
+<td align="left">The default height used to display the widget. This parameter specifies the default height for viewing in all contexts (browser, viewer, and knitr) unless it is specifically overridden with e.g. browser.defaultHeight.</td>
+</tr>
+<tr class="odd">
+<td align="left">padding</td>
+<td align="left">Padding around the widget (in pixels). This parameter specifies the padding for viewing in all contexts (browser and viewer) unless it is specifically overridden by e.g. browser.padding.</td>
+</tr>
+<tr class="even">
+<td align="left">viewer.defaultWidth</td>
+<td align="left">The default width used to display the widget within the RStudio Viewer.</td>
+</tr>
+<tr class="odd">
+<td align="left">viewer.defaultHeight</td>
+<td align="left">The default height used to display the widget within the RStudio Viewer.</td>
+</tr>
+<tr class="even">
+<td align="left">viewer.padding</td>
+<td align="left">Padding around the widget when displayed in the RStudio Viewer (defaults to 15 pixels).</td>
+</tr>
+<tr class="odd">
+<td align="left">viewer.fill</td>
+<td align="left">When displayed in the RStudio Viewer, automatically size the widget to the viewer dimensions (note that viewer.padding is still applied). Default to TRUE.</td>
+</tr>
+<tr class="even">
+<td align="left">viewer.suppress</td>
+<td align="left">Never display the widget within the RStudio Viewer (useful for widgets that require a large amount of space for rendering). Defaults to FALSE.</td>
+</tr>
+<tr class="odd">
+<td align="left">viewer.paneHeight</td>
+<td align="left">Request that the RStudio Viewer be forced to a specific height when displaying this widget.</td>
+</tr>
+<tr class="even">
+<td align="left">browser.defaultWidth</td>
+<td align="left">The default width used to display the widget within a standalone web browser.</td>
+</tr>
+<tr class="odd">
+<td align="left">browser.defaultHeight</td>
+<td align="left">The default height used to display the widget within a standalone web browser</td>
+</tr>
+<tr class="even">
+<td align="left">browser.padding</td>
+<td align="left">Padding around the widget when displayed in a standalone browser (defaults to 40 pixels).</td>
+</tr>
+<tr class="odd">
+<td align="left">browser.fill</td>
+<td align="left">When displayed in a standalone web browser, automatically size the widget to the browser dimensions (note that browser.padding is still applied). Defaults to FALSE.</td>
+</tr>
+<tr class="even">
+<td align="left">browser.external</td>
+<td align="left">When displaying in a browser, always use an external browser (via browseURL()). Defaults to FALSE, which will result in the use of an internal browser within RStudio v1.1 and higher.</td>
+</tr>
+<tr class="odd">
+<td align="left">knitr.defaultWidth</td>
+<td align="left">The default width used to display the widget within documents generated by knitr (e.g. R Markdown).</td>
+</tr>
+<tr class="even">
+<td align="left">knitr.defaultHeight</td>
+<td align="left">The default height used to display the widget within documents generated by knitr (e.g. R Markdown).</td>
+</tr>
+<tr class="odd">
+<td align="left">knitr.figure</td>
+<td align="left">Apply the default knitr fig.width and fig.height to the widget when it’s rendered within R Markdown documents. Defaults to TRUE.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="javascript" class="section level2">
+<h2><span class="header-section-number">2.3</span> JavaScript调整大小方法</h2>
+<p>设置大小策略允许htmlwidgets在展示图像的区域计算控件的宽和高，然而你仍然需要把你定义的这种大小信息传递给底层你创建控件所使用的JavaScript库。</p>
+<p>每一个JavaSript库在处理动态大小调整问题时都有一些不同，有些可能自动调整，有些可能需要通过resize()函数调用布局，有些可能需要通过设置数据或其他选项实现。无论哪种情况，htmlwidhets框架将把计算的大小传递给函数factory和resize函数.下面是一个空的JavaScript binding的说明例子：</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">HTMLWidgets.widget</span>({
 
+  name<span class="op">:</span><span class="st"> &quot;demo&quot;</span>,
+  
+  type<span class="op">:</span><span class="st"> &quot;output&quot;</span>,
+  
+  factory<span class="op">:</span><span class="st"> </span><span class="cf">function</span>(el, width, height) {
+  
+    return {
+      renderValue<span class="op">:</span><span class="st"> </span><span class="cf">function</span>(x) {
+      
+      },
+      
+      resize<span class="op">:</span><span class="st"> </span><span class="cf">function</span>(width, height) {
+        
+      }
+    };
+  }
+});</code></pre></div>
+<p>您所处理的宽度和高度是由您决定的，它取决于您正在创建控件的基础JavaScript库的大小调整语义。</p>
+<div id="-2" class="section level3">
+<h3><span class="header-section-number">2.3.1</span> 例子</h3>
+<div id="dygraphs" class="section level4">
+<h4><span class="header-section-number">2.3.1.1</span> dygraphs</h4>
+<p>在<a href="http://rstudio.github.io/dygraphs/">dygraphs</a>控件中，调整大小的实现现对简单，因为dygraphs库包含一个resize()方法来自动的将该图大小映射到封闭HTML元素。</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">resize<span class="op">:</span><span class="st"> </span><span class="cf">function</span>(width, height) {
+  <span class="cf">if</span> (dygraph)
+    <span class="kw">dygraph.resize</span>();
+}</code></pre></div>
+</div>
+<div id="forcenetwork" class="section level4">
+<h4><span class="header-section-number">2.3.1.2</span> forceNetwork</h4>
+<p>在<a href="https://github.com/d3VA/forceNetwork">forceNetwork</a>通过适用于承载D3网络可视化的<code>&lt;svg&gt;</code>标签来传递宽和高的大小变化。</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">factory<span class="op">:</span><span class="st"> </span><span class="cf">function</span>(el, width, height) {
+
+  <span class="op">/</span><span class="er">/</span><span class="st"> </span>instance data
+  var el =<span class="st"> </span>el;
+  var force =<span class="st"> </span><span class="kw">d3.layout.force</span>();
+
+  <span class="kw">d3.select</span>(el)<span class="kw">.append</span>(<span class="st">&quot;svg&quot;</span>)
+    <span class="kw">.attr</span>(<span class="st">&quot;width&quot;</span>, width)
+    <span class="kw">.attr</span>(<span class="st">&quot;height&quot;</span>, height);
+      
+  return {
+    renderValue<span class="op">:</span><span class="st"> </span><span class="cf">function</span>(x) {
+      <span class="op">/</span><span class="er">/</span><span class="st"> </span>implementation excluded
+    },
+      
+    resize<span class="op">:</span><span class="st"> </span><span class="cf">function</span>(width, height) {
+         
+      <span class="kw">d3.select</span>(el)<span class="kw">.select</span>(<span class="st">&quot;svg&quot;</span>)
+        <span class="kw">.attr</span>(<span class="st">&quot;width&quot;</span>, width)
+        <span class="kw">.attr</span>(<span class="st">&quot;height&quot;</span>, height);
+
+      <span class="kw">force.size</span>([width, height])<span class="kw">.resume</span>();
+    }
+  };
+}</code></pre></div>
+<p>我们看到在不同的JavaScript库中，resize方法可能会提供灵活的自动调整大小的逻辑，这是我们需要注意的。</p>
+
+</div>
+</div>
 </div>
 </div>
             </section>

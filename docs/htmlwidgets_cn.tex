@@ -124,7 +124,7 @@
   \postauthor{\par}
   \predate{\centering\large\emph}
   \postdate{\par}
-  \date{2018-07-04}
+  \date{2018-07-05}
 
 \usepackage{booktabs}
 \usepackage{xeCJK}
@@ -163,11 +163,7 @@
 
 \href{https://CRAN.R-project.org/package=htmlwidgets}{htmlwidgets}是R语言中非常有划时代意义的包，因为有了htmlwidgets使得R语言在交互可视化和基于JavaScript的编程有了实质性的进步。htmlwidgets目前没有中文说明文档和教程，该文档是对官方文档的详细翻译，译者水平有限，读者可以在\url{https://github.com/DataXujing/htmlwidgets_CN/issues}中留言指正。
 
-\begin{figure}
-\centering
-\includegraphics{pic/cover.png}
-\caption{}
-\end{figure}
+\begin{center}\includegraphics[height=0.7\textheight]{pic/cover} \end{center}
 
 \chapter*{序言}
 \addcontentsline{toc}{chapter}{序言}
@@ -204,7 +200,7 @@ Date/Publication 2018-04-19 12:43:03 UTC
 
 联信商务咨询有限公司
 
-2018-07-02
+2017-06-02
 
 \chapter*{关于译者}
 \addcontentsline{toc}{chapter}{关于译者}
@@ -317,11 +313,7 @@ Exchange XML Format)数据文件的交互可视化，例如：
 \end{Highlighting}
 \end{Shaded}
 
-\begin{figure}
-\centering
-\includegraphics{pic/ch1_1.png}
-\caption{}
-\end{figure}
+\begin{center}\includegraphics{pic/ch1_1} \end{center}
 
 注意上面的输出仅仅是一个静态图像，你可以按照下文的Demo做一个交互的版本。
 
@@ -665,17 +657,235 @@ UI中的面板。\textbf{htmlwidgets}框架提供了一种丰富的机制来指�
 
 \section{指定大小调整策略}
 
+默认HTML窗口大小调整策略使用与R图相同大小的语义来处理控件。当在R控制台上打印时，窗口小部件显示在RStudio
+Viewer中，并且大小以填充查看器窗格（模数任何填充）。当在R
+Markdown文档中呈现时，控件大小基于默认的图片文件的大小。
+
+需要注意的是对于大多数的控件来说默认的大小是很不错的选择，你不需要去创建一个大小调整的策略。如果你想轻微的修改大小策略，使得与默认的不同，那么你可以调用sizingPolicy函数，然后把结果传递给createWidget函数。例如：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{htmlwidgets}\OperatorTok{::}\KeywordTok{createWidget}\NormalTok{(}
+  \StringTok{"sigma"}\NormalTok{, }
+\NormalTok{  x, }
+  \DataTypeTok{width =}\NormalTok{ width, }
+  \DataTypeTok{height =}\NormalTok{ height,}
+  \DataTypeTok{sizingPolicy =}\NormalTok{ htmlwidgets}\OperatorTok{::}\KeywordTok{sizingPolicy}\NormalTok{(}
+    \DataTypeTok{viewer.padding =} \DecValTok{0}\NormalTok{,}
+    \DataTypeTok{viewer.paneHeight =} \DecValTok{500}\NormalTok{,}
+    \DataTypeTok{browser.fill =} \OtherTok{TRUE}
+\NormalTok{  )}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{例子}\label{-1}
+
+\href{http://christophergandrud.github.io/networkD3/}{networkD3}包对所有的控件直接使用了自定义的大小策略，simpleNetwork控件消除填充（因为D3已经提供填充），并且指定当它在一个独立的Web浏览器中显示时，它希望填充尽可能多的空间：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{sizingPolicy}\NormalTok{(}\DataTypeTok{padding =} \DecValTok{0}\NormalTok{, }\DataTypeTok{browser.fill =} \OtherTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+sankeyNetwork控件需要比Rstudio
+Viewer提供的更多的空间或典型的knitr图片，因此它禁用了那些自动调整大小的行为。针对于knitr文档他还提供了一个恰当的默认的宽和高：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{sizingPolicy}\NormalTok{(}\DataTypeTok{viewer.suppress =} \OtherTok{TRUE}\NormalTok{,}
+             \DataTypeTok{knitr.figure =} \OtherTok{FALSE}\NormalTok{,}
+             \DataTypeTok{browser.fill =} \OtherTok{TRUE}\NormalTok{,}
+             \DataTypeTok{browser.padding =} \DecValTok{75}\NormalTok{,}
+             \DataTypeTok{knitr.defaultWidth =} \DecValTok{800}\NormalTok{,}
+             \DataTypeTok{knitr.defaultHeight =} \DecValTok{500}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{可用选项}
+
+以下是在大小调整策略中可以指定的各种选项：
+
+\begin{tabular}{ll}
+\toprule
+Option & Description\\
+\midrule
+defaultWidth & The default width used to display the widget. This parameter specifies the default width for viewing in all contexts (browser, viewer, and knitr) unless it is specifically overridden with e.g. browser.defaultWidth.\\
+defaultHeight & The default height used to display the widget. This parameter specifies the default height for viewing in all contexts (browser, viewer, and knitr) unless it is specifically overridden with e.g. browser.defaultHeight.\\
+padding & Padding around the widget (in pixels). This parameter specifies the padding for viewing in all contexts (browser and viewer) unless it is specifically overridden by e.g. browser.padding.\\
+viewer.defaultWidth & The default width used to display the widget within the RStudio Viewer.\\
+viewer.defaultHeight & The default height used to display the widget within the RStudio Viewer.\\
+\addlinespace
+viewer.padding & Padding around the widget when displayed in the RStudio Viewer (defaults to 15 pixels).\\
+viewer.fill & When displayed in the RStudio Viewer, automatically size the widget to the viewer dimensions (note that viewer.padding is still applied). Default to TRUE.\\
+viewer.suppress & Never display the widget within the RStudio Viewer (useful for widgets that require a large amount of space for rendering). Defaults to FALSE.\\
+viewer.paneHeight & Request that the RStudio Viewer be forced to a specific height when displaying this widget.\\
+browser.defaultWidth & The default width used to display the widget within a standalone web browser.\\
+\addlinespace
+browser.defaultHeight & The default height used to display the widget within a standalone web browser\\
+browser.padding & Padding around the widget when displayed in a standalone browser (defaults to 40 pixels).\\
+browser.fill & When displayed in a standalone web browser, automatically size the widget to the browser dimensions (note that browser.padding is still applied). Defaults to FALSE.\\
+browser.external & When displaying in a browser, always use an external browser (via browseURL()). Defaults to FALSE, which will result in the use of an internal browser within RStudio v1.1 and higher.\\
+knitr.defaultWidth & The default width used to display the widget within documents generated by knitr (e.g. R Markdown).\\
+\addlinespace
+knitr.defaultHeight & The default height used to display the widget within documents generated by knitr (e.g. R Markdown).\\
+knitr.figure & Apply the default knitr fig.width and fig.height to the widget when it’s rendered within R Markdown documents. Defaults to TRUE.\\
+\bottomrule
+\end{tabular}
+
+\section{JavaScript调整大小方法}\label{javascript}
+
+设置大小策略允许htmlwidgets在展示图像的区域计算控件的宽和高，然而你仍然需要把你定义的这种大小信息传递给底层你创建控件所使用的JavaScript库。
+
+每一个JavaSript库在处理动态大小调整问题时都有一些不同，有些可能自动调整，有些可能需要通过resize()函数调用布局，有些可能需要通过设置数据或其他选项实现。无论哪种情况，htmlwidhets框架将把计算的大小传递给函数factory和resize函数.下面是一个空的JavaScript
+binding的说明例子：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{HTMLWidgets.widget}\NormalTok{(\{}
+
+\NormalTok{  name}\OperatorTok{:}\StringTok{ "demo"}\NormalTok{,}
+  
+\NormalTok{  type}\OperatorTok{:}\StringTok{ "output"}\NormalTok{,}
+  
+\NormalTok{  factory}\OperatorTok{:}\StringTok{ }\ControlFlowTok{function}\NormalTok{(el, width, height) \{}
+  
+\NormalTok{    return \{}
+\NormalTok{      renderValue}\OperatorTok{:}\StringTok{ }\ControlFlowTok{function}\NormalTok{(x) \{}
+      
+\NormalTok{      \},}
+      
+\NormalTok{      resize}\OperatorTok{:}\StringTok{ }\ControlFlowTok{function}\NormalTok{(width, height) \{}
+        
+\NormalTok{      \}}
+\NormalTok{    \};}
+\NormalTok{  \}}
+\NormalTok{\});}
+\end{Highlighting}
+\end{Shaded}
+
+您所处理的宽度和高度是由您决定的，它取决于您正在创建控件的基础JavaScript库的大小调整语义。
+
+\subsection{例子}\label{-2}
+
+\subsubsection{dygraphs}\label{dygraphs}
+
+在\href{http://rstudio.github.io/dygraphs/}{dygraphs}控件中，调整大小的实现现对简单，因为dygraphs库包含一个resize()方法来自动的将该图大小映射到封闭HTML元素。
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{resize}\OperatorTok{:}\StringTok{ }\ControlFlowTok{function}\NormalTok{(width, height) \{}
+  \ControlFlowTok{if}\NormalTok{ (dygraph)}
+    \KeywordTok{dygraph.resize}\NormalTok{();}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{forceNetwork}\label{forcenetwork}
+
+在\href{https://github.com/d3VA/forceNetwork}{forceNetwork}通过适用于承载D3网络可视化的\texttt{\textless{}svg\textgreater{}}标签来传递宽和高的大小变化。
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{factory}\OperatorTok{:}\StringTok{ }\ControlFlowTok{function}\NormalTok{(el, width, height) \{}
+
+  \OperatorTok{/}\ErrorTok{/}\StringTok{ }\NormalTok{instance data}
+\NormalTok{  var el =}\StringTok{ }\NormalTok{el;}
+\NormalTok{  var force =}\StringTok{ }\KeywordTok{d3.layout.force}\NormalTok{();}
+
+  \KeywordTok{d3.select}\NormalTok{(el)}\KeywordTok{.append}\NormalTok{(}\StringTok{"svg"}\NormalTok{)}
+    \KeywordTok{.attr}\NormalTok{(}\StringTok{"width"}\NormalTok{, width)}
+    \KeywordTok{.attr}\NormalTok{(}\StringTok{"height"}\NormalTok{, height);}
+      
+\NormalTok{  return \{}
+\NormalTok{    renderValue}\OperatorTok{:}\StringTok{ }\ControlFlowTok{function}\NormalTok{(x) \{}
+      \OperatorTok{/}\ErrorTok{/}\StringTok{ }\NormalTok{implementation excluded}
+\NormalTok{    \},}
+      
+\NormalTok{    resize}\OperatorTok{:}\StringTok{ }\ControlFlowTok{function}\NormalTok{(width, height) \{}
+         
+      \KeywordTok{d3.select}\NormalTok{(el)}\KeywordTok{.select}\NormalTok{(}\StringTok{"svg"}\NormalTok{)}
+        \KeywordTok{.attr}\NormalTok{(}\StringTok{"width"}\NormalTok{, width)}
+        \KeywordTok{.attr}\NormalTok{(}\StringTok{"height"}\NormalTok{, height);}
+
+      \KeywordTok{force.size}\NormalTok{([width, height])}\KeywordTok{.resume}\NormalTok{();}
+\NormalTok{    \}}
+\NormalTok{  \};}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+我们看到在不同的JavaScript库中，resize方法可能会提供灵活的自动调整大小的逻辑，这是我们需要注意的。
+
 \chapter{HTML控件：高级主题}\label{htmlwidgets-advanced}
 
-正在翻译中\ldots{}
+\section{概述}\label{-1}
+
+\section{数据变换}
+
+\subsection{HTMLWidgets.dataframeToD3()}\label{htmlwidgets.dataframetod3}
+
+\subsection{HTMLWidgets.transposeArray2D()}\label{htmlwidgets.transposearray2d}
+
+\subsection{自定义JSON串行化器}\label{json}
+
+\section{传递JavaScript函数}\label{javascript}
+
+\section{自定义控件HTML}\label{html}
 
 \chapter{htmlwidgets包中函数的总结}\label{htmlwidgets-pkgintro}
 
-正在翻译中\ldots{}
+一个完整的R包提交到CRAN,都会有一个函数使用的说明文档或手册，\href{https://cran.r-project.org/web/packages/htmlwidgets/htmlwidgets.pdf}{htmlwidgets}也不例外,我们将按照原说明文档的函数顺序，翻译解释htmlwidgets包中函数的用途和参数设置。这其中有些方法我们在前三章中已经提到。
+
+\section{htmlwidgets包函数}\label{htmlwidgets}
+
+\begin{itemize}
+\item
+  htmlwidgets-package
+\item
+  createWidget
+\item
+  getDependency
+\item
+  htmlwidgets-shiny
+\item
+  JS
+\item
+  onRender
+\item
+  onStaticRenderComplete .
+\item
+  prependContent
+\item
+  saveWidget
+\item
+  scaffoldWidget
+\item
+  setWidgetIdSeed
+\item
+  sizingPolicy
+\end{itemize}
 
 \chapter{总结}\label{summary}
 
-总结
+R语言之所以在数据科学领域受到如此的重视，特别是在交互可视化方面要优于Python(虽然Python也有像bokeh,pyecharts,dash等优秀的交互可视化模块)。我认为其主要原因在于R通过htmlwidgets包很好的融合JavaScript，使得R可视化可以尽情的调用漂亮的JavaScript前端可视化的库，像Echarts,D3等等，并且原生的与R
+Markdown,Shiny结合实现动态的基于Web的系统原型搭建和自动化分析报告展示。
+
+通过htmlwidgets的学习，相信大家应该明白像Leaflet,rbokeh,networkD3,recharts,threejs,DataTables等等这样的优秀的交互可视化和数据展示的R包是如何实现的了，并能基于JavaScript实现自己的交互可视化R包，期待读者基于htmlwidgets的R包的问世。
+
+最后引用Rstudio官网对于htmlwigets包的描述：
+
+\begin{itemize}
+\item
+  把最好的JavaScript数据可视化应用到R
+\item
+  在R控制台上使用JavaScript可视化库，就像绘图一样
+\item
+  在R Markdown文档和Shiny Web应用程序中嵌入控件
+\item
+  使用一个无缝连接R和JavaScript的框架开发新的控件
+\end{itemize}
 
 \chapter{参考文献}\label{reference}
 
@@ -686,6 +896,9 @@ UI中的面板。\textbf{htmlwidgets}框架提供了一种丰富的机制来指�
 \href{https://CRAN.R-project.org/package=htmlwidgets}{CRAN上htmlwidgets的地址}
 
 {[}3{]}. \href{https://www.htmlwidgets.org/}{Rstudio官网上的地址}
+
+{[}4{]}.
+\href{https://cran.r-project.org/web/packages/htmlwidgets/htmlwidgets.pdf}{官方说明文档}
 
 \bibliography{book.bib,packages.bib}
 

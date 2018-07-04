@@ -1,3 +1,30 @@
 # htmlwidgets包中函数的总结 {#htmlwidgets-pkgintro}
 
-正在翻译中...
+一个完整的R包提交到CRAN,都会有一个函数使用的说明文档或手册，[htmlwidgets](https://cran.r-project.org/web/packages/htmlwidgets/htmlwidgets.pdf)也不例外,我们将按照原说明文档的函数顺序，翻译解释htmlwidgets包中函数的用途和参数设置。这其中有些方法我们在前三章中已经提到。
+
+## htmlwidgets包函数
+
++ htmlwidgets-package 
+
++ createWidget 
+
++ getDependency 
+
++ htmlwidgets-shiny 
+
++ JS 
+
++ onRender 
+
++ onStaticRenderComplete .
+
++ prependContent 
+
++ saveWidget 
+
++ scaffoldWidget 
+
++ setWidgetIdSeed 
+
+
++ sizingPolicy 

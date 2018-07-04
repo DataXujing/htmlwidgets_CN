@@ -5,3 +5,5 @@
 [2]. [CRAN上htmlwidgets的地址](https://CRAN.R-project.org/package=htmlwidgets)
 
 [3]. [Rstudio官网上的地址](https://www.htmlwidgets.org/)
+
+[4]. [官方说明文档](https://cran.r-project.org/web/packages/htmlwidgets/htmlwidgets.pdf)

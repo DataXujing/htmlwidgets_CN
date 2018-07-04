@@ -1,4 +1,16 @@
 # 总结 {#summary}
 
 
-总结
+R语言之所以在数据科学领域受到如此的重视，特别是在交互可视化方面要优于Python(虽然Python也有像bokeh,pyecharts,dash等优秀的交互可视化模块)。我认为其主要原因在于R通过htmlwidgets包很好的融合JavaScript，使得R可视化可以尽情的调用漂亮的JavaScript前端可视化的库，像Echarts,D3等等，并且原生的与R Markdown,Shiny结合实现动态的基于Web的系统原型搭建和自动化分析报告展示。
+
+通过htmlwidgets的学习，相信大家应该明白像Leaflet,rbokeh,networkD3,recharts,threejs,DataTables等等这样的优秀的交互可视化和数据展示的R包是如何实现的了，并能基于JavaScript实现自己的交互可视化R包，期待读者基于htmlwidgets的R包的问世。
+
+最后引用Rstudio官网对于htmlwigets包的描述：
+
++ 把最好的JavaScript数据可视化应用到R
+
++ 在R控制台上使用JavaScript可视化库，就像绘图一样
+
++ 在R Markdown文档和Shiny Web应用程序中嵌入控件
+
++ 使用一个无缝连接R和JavaScript的框架开发新的控件

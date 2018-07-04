@@ -1,3 +1,17 @@
 # HTML控件：高级主题{#htmlwidgets-advanced}
 
-正在翻译中...
+## 概述
+
+## 数据变换
+
+
+### HTMLWidgets.dataframeToD3()
+
+### HTMLWidgets.transposeArray2D()
+
+### 自定义JSON串行化器
+
+
+## 传递JavaScript函数
+
+## 自定义控件HTML

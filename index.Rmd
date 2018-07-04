@@ -15,7 +15,9 @@ description: "这是一个htmlwidgets的中文教程"
 
 [htmlwidgets](https://CRAN.R-project.org/package=htmlwidgets)是R语言中非常有划时代意义的包，因为有了htmlwidgets使得R语言在交互可视化和基于JavaScript的编程有了实质性的进步。htmlwidgets目前没有中文说明文档和教程，该文档是对官方文档的详细翻译，译者水平有限，读者可以在<https://github.com/DataXujing/htmlwidgets_CN/issues>中留言指正。
 
-![](pic/cover.png)
+```{r echo=F,out.height = '70%', fig.align = 'center'}
+knitr::include_graphics('pic/cover.png')
+```
 
 # 序言{-}
 
@@ -54,7 +56,7 @@ Date/Publication 2018-04-19 12:43:03 UTC
 
 <br>
 
-<p style='float:right;'> 2018-07-02 </p>
+<p style='float:right;'> 2017-06-02 </p>
 
 # 关于译者{-}
 

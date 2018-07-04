@@ -71,8 +71,9 @@ library(sigma)
 data <- system.file("examples/ediaspora.gexf.xml", package = "sigma")
 sigma(data)
 ```
-
-![](pic/ch1_1.png)
+```{r echo=F,fig.align = 'center'}
+knitr::include_graphics('pic/ch1_1.png')
+```
 
 注意上面的输出仅仅是一个静态图像，你可以按照下文的Demo做一个交互的版本。
 
