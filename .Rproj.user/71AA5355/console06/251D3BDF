@@ -1,692 +1,0 @@
-[0m[0K]0;:/c/Users/Administrator.USER-20170417DX/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[?25l
-[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0m[0K
-$[0K[3G[?25h[?25l$ git[0K[?25h[7G[?25l$ git i[0K[?25hn[0Ki[0Kt[0K[?25l
-[0K[?25hInitialized empty Git repository in C:/Users/Administrator.USER-20170417DX/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn/.git/[0K[?25l
-[0K[?25h[?25l
-[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25h[?25l
-[0K[?25hwarning: LF will be replaced by CRLF in .Rhistory.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/build_options.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/71AA5355/pcs/files-pane.pper.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/pcs/source-pane.pper.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/pcs/windowlayoutstate.pper.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/pcs/workbench-pane.pper.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/rmd-outputs.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/sources/prop/1EBA7629.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/sources/prop/20BEEA20.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/sources/prop/3597ADF4.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/sources/prop/380D4895.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/sources/prop/3F9F8A59.[0K
-The file will have its orig[0K[?25hinal line endings in your working directory.[0K[?25l
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/sources/prop/5197417C.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/sources/prop/5E77BA0C.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/sources/prop/5E8549D3.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/sources/prop/70EFAF8.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/sources/prop/A2083AED.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/sources/prop/B57327E3.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/sources/prop/EFCE18D2.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/sources/prop/FF162251.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/sources/prop/INDEX.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/sources/s-E73D5D56/64927F99.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/sources/s-E73D5D56/64927F99-contents.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/sources/s-E73D5D56/82C25C41.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/sources/s-E73D5D56/82C25C41-contents.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/sources/s-E73D5D56/995B7C77.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/71AA5355/sources/s-E73D5D56/995B7C77-contents.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/shared/notebooks/paths.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in _book/libs/gitbook-2.6.7/css/plugin-bookdown.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in _book/libs/gitbook-2.6.7/css/plugin-fontsettings.css.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in _book/libs/gitbook-2.6.7/css/plugin-highlight.css.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in _book/libs/gitbook-2.6.7/css/plugin-search.css.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in _book/libs/gitbook-2.6.7/css/style.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in _book/libs/gitbook-2.6.7/js/app.min.js.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in _book/libs/gitbook-2.6.7/js/jquery.highlight.js.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in _book/libs/gitbook-2.6.7/js/lunr.js.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in _book/libs/gitbook-2.6.7/js/plugin-bookdown.js.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in _book/libs/gitbook-2.6.7/js/plugin-fontsettings.js.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in _book/libs/gitbook-2.6.7/js/plugin-search.js.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in _book/libs/gitbook-2.6.7/js/plugin-sharing.js.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in _book/libs/jquery-2.2.3/jquery.min.js.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in _book/style.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in book.bib.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in preamble.tex.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in style.css.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25h[?25l
-[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25h,[0K[?25l$ git commit -[0K[?25hm[0K'[0K:[0Ka[0Kr[0Kt[0K:[0K'[0K[?25l
-[0K[?25h[master (root-commit) 582ad69] :art:[0K[?25l
- 91 files changed, 4485 insertions(+)[0K
- create mode 100644 .Rhistory[0K
- create mode 100644 .Rproj.user/71AA5355/build_options[0K
- create mode 100644 .Rproj.user/71AA5355/console06/251D3BDF[0K
- create mode 100644 .Rproj.user/71AA5355/console06/INDEX001[0K
- create mode 100644 .Rproj.user/71AA5355/pcs/files-pane.pper[0K
- create mode 100644 .Rproj.user/71AA5355/pcs/source-pane.pper[0K
- create mode 100644 .Rproj.user/71AA5355/pcs/windowlayoutstate.pper[0K
- create mode 100644 .Rproj.user/71AA5355/pcs/workbench-pane.pper[0K
- create mode 100644 .Rproj.user/71AA5355/rmd-outputs[0K
- create mode 100644 .Rproj.user/71AA5355/saved_source_markers[0K
- create mode 100644 .Rproj.user/71AA5355/sources/prop/1EBA7629[0K
- create mode 100644 .Rproj.user/71AA5355/sources/prop/20BEEA20[0K
- create mode 100644 .Rproj.user/71AA5355/sources/prop/3597ADF4[0K
- create mode 100644 .Rproj.user/71AA5355/sources/prop/380D4895[0K
- create mode 100644 .Rproj.user/71AA5355/sources/prop/3F9F8A59[0K
- create mode 100644 .Rproj.user/71AA5355/sources/prop/5197417C[0K
- create mode 100644 .Rproj.user/71AA5355/sources/prop/5E77BA0C[0K
- create mode 100644 .Rproj.user/71AA5355/sources/prop/5E8549D3[0K
- create mode 100644 .Rproj.user/71AA5355/sources/prop/70EFAF8[0K
- create mode 100644 .Rproj.user/71AA5355/sources/prop/A2083AED[0K
- create mode 100644 .Rproj.user/71AA5355/sources/prop/B57327E3[0K
- create mode 100644 .Rproj.user/71AA5355/sources/prop/EFCE18D2[0K
- create mode 100644 .Rproj.user/71AA5355/sources/prop/FF162251[0K
- create mode 100644 .Rproj.user/71AA5355/sources/prop/INDEX[0K
- create mode 100644 .Rproj.user/71AA5355/sources/s-E73D5D56/64927F99[0K
- create mode 100644 .Rproj.user/71AA5355/sources/s-E73D5D56/64927F99-contents[0K
- create mode 100644 .Rproj.user/71AA5355/sources/s-E73D5D56/82C25C41[0K
- create mode 100644 .Rproj.user/71AA5355/sources/s-E73D5D56/82C25C41-contents[0K
- create mode 100644 .Rproj.user/71AA5355/sources/s-E73D5D56/995B7C77[0K
- create mode 100644 .Rproj.user/71AA5355/sources/s-E73D5D56/995B7C77-contents[0K
- create mode 100644 .Rproj.user/71AA5355/sources/s-E73D5D56/lock_file[0K
- create mode 100644 .Rproj.user/shared/notebooks/1A086555-index/1/71AA53559CB19BBE/chunks.json[0K
- create mode 100644 .Rproj.user/shared/notebooks/1A086555-index/1/71AA5355E73D5D56/chunks.json[0K
- create mode 100644 .Rproj.user/shared/notebooks/1A086555-index/1/s/chunks.json[0K
- create mode 100644 .Rproj.user/shared/notebooks/30FD3362-04-pkgintro/1/71AA53559CB19BBE/chunks.json[0K
- create mode 100644 .Rproj.user/shared/notebooks/30FD3362-04-pkgintro/1/s/chunks.json[0K
- create mode 100644 .Rproj.user/shared/notebooks/3D69BDE9-01-intro/1/71AA53559CB19BBE/chunks.json[0K
- create mode 100644 .Rproj.user/shared/notebooks/3D69BDE9-01-intro/1/71AA5355E73D5D56/chunks.json[0K
- create mode 100644 .Rproj.user/shared/notebooks/3D69BDE9-01-intro/1/s/chunks.json[0K
- create mode 100644 .Rproj.user/shared/notebooks/94681910-05-summary/1/71AA53559CB19BBE/chunks.json[0K
- create mode 100644 .Rproj.user/shared/notebooks/94681910-05-summary/1/s/chunks.json[0K
- create mode 100644 .Rproj.user/shared/notebooks/ABFE06CA-03-sizing/1/71AA53559CB19BBE/chunks.json[0K
- create mode 100644 .Rproj.user/shared/notebooks/ABFE06CA-03-sizing/1/s/chunks.json[0K
- create mode 100644 .Rproj.user/shared/notebooks/DFC3D0E0-06-references/1/71AA53559CB19BBE/chunks.json[0K
- create mode 100644 .Rproj.user/shared/notebooks/DFC3D0E0-06-references/1/s/chunks.json[0K
- create mode 100644 .Rproj.user/shared/notebooks/patch-chunk-names[0K
- create mode 100644 .Rproj.user/shared/notebooks/paths[0K
- create mode 100644 01-intro.Rmd[0K
- create mode 100644 02-advance.Rmd[0K
- create mode 100644 03-sizing.Rmd[0K
- create mode 100644 04-pkgintro.Rmd[0K
- create mode 100644 05-summary.Rmd[0K
- create mode 100644 06-references.Rmd[0K
- create mode 100644 README.md[0K
- create mode 100644 _book/_bookdown_files/htmlwidgets_cn_files/figure-html/ch1_1.png[0K
- create mode 100644 _book/e585b3e4ba8ee8af91e88085.html[0K
- create mode 100644 _book/e5ba8fe8a880.html[0K
- create mode 100644 "_book/htmlwidgets\345\214\205\347\232\204\347\277\273\350\257\221.html"[0K
- create mode 100644 "_book/htmlwidgets\347\256\200\344\273\213.html"[0K
- create mode 100644 "_book/htmlwidgets\350\277\233\351\230\266.html"[0K
- create mode 100644 _book/index.html[0K
- create mode 100644 _book/libs/gitbook-2.6.7/css/fontawesome/fontawesome-webfont.ttf[0K
- create mode 100644 _book/libs/gitbook-2.6.7/css/plugin-bookdown.css[0K
- create mode 100644 _book/libs/gitbook-2.6.7/css/plugin-fontsettings.css[0K
- create mode 100644 _book/libs/gitbook-2.6.7/css/plugin-highlight.css[0K
- create mode 100644 _book/libs/gitbook-2.6.7/css/plugin-search.css[0K
- create mode 100644 _book/libs/gitbook-2.6.7/css/style.css[0K
- create mode 100644 _book/libs/gitbook-2.6.7/js/app.min.js[0K
- create mode 100644 _book/libs/gitbook-2.6.7/js/jquery.highlight.js[0K
- create mode 100644 _book/libs/gitbook-2.6.7/js/lunr.js[0K
- create mode 100644 _book/libs/gitbook-2.6.7/js/plugin-bookdown.js[0K
- create mode 100644 _book/libs/gitbook-2.6.7/js/plugin-fontsettings.js[0K
- create mode 100644 _book/libs/gitbook-2.6.7/js/plugin-search.js[0K
- create mode 100644 _book/libs/gitbook-2.6.7/js/plugin-sharing.js[0K
- create mode 100644 _book/libs/jquery-2.2.3/jquery.min.js[0K
- create mode 100644 _book/search_index.json[0K
- create mode 100644 _book/section-5.html[0K
- create mode 100644 _book/section-6.html[0K
- create mode 100644 _book/sizinghtmlwidgets-sizing.html[0K
- create mode 100644 _book/style.css[0K
- create mode 100644 _bookdown.yml[0K
- create mode 100644 _bookdown_files/htmlwidgets_cn_files/figure-html/ch1_1.png[0K
- create mode 100644 _bookdown_files/htmlwidgets_cn_files/figure-html/nice-fig-1.png[0K
- create mode 100644 _output.yml[0K
- create mode 100644 book.bib[0K
- create mode 100644 e5a3b0e6988e.html[0K
- create mode 100644 htmlwidgets_cn.Rproj[0K
- create mode 100644 index.Rmd[0K
- create mode 100644 packages.bib[0K
- create mode 100644 preamble.tex[0K
- create mode 100644 style.css[0K
-[0K[?25h[?25l
-[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets_CN.git[0K[?25h[?25l
-[0K[?25h[?25l
-[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ git push -u origin master[0K[?25h[?25l
-[0K[?25hfatal: HttpRequestException encountered.[0K[?25l
-   发送请求时出错。[0K
-[0K[?25herror: cannot spawn rpostback-askpass: No such file or directory[0K[?25l
-[0K[?25hUsername for 'https://github.com':[0K[36G[?25lUsername for 'https://github.com': D[0K[?25ha[0Kt[0Ka[0KX[0Ku[0Kj[0Ki[0Kn[0Kg[0K[?25l
-[0K[?25herror: cannot spawn rpostback-askpass: No such file or directory[0K[?25l
-[0K[?25hPassword for 'https://DataXujing@github.com':[0K[47G[?25l
-[0K[?25hCounting objects: 121, done.[0K[?25l
-Delta compression using up to 4 threads.[0K
-Compressing objects:  34% (31/90)[0K[2G[?25h[?25lCompressing objects: 100% (90/90), done.[0K
-Writing objects:  67% (82/121)[0K[1G[?25h[?25lWriting objects:  98% (119/121)[0K[1G[?25hWriting objects: 100% (121/121), 331.53 KiB | 5.62 MiB/s, done.[0K[?25l
-Total 121 (delta 11), reused 0 (delta 0)[0K
-[0K[?25hremote: Resolving deltas: 100% (11/11), done.[0K[?25l
-[0K[?25hTo https://github.com/DataXujing/htmlwidgets_CN.git[0K[?25l
- * [new branch]      master -> master[0K
-[0K[?25hBranch master set up to track remote branch master from origin.[0K[?25l
-[0K[?25h[?25l
-[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ git push -u origin master[0K[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets_CN.git[0K[?25h[?25l$ git commit -m':art:'[0K[?25h[?25l$ git add .[0K[?25h[?25l$ git init[0K[?25h[?25l
-[0K[?25hReinitialized existing Git repository in C:/Users/Administrator.USER-20170417DX/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn/.git/[0K[?25l
-[0K[?25h[?25l
-[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ git init[0K[?25h[?25l$ git push -u origin master[0K[?25h[1G$ git remote add origin https://github.com/DataXujing/htmlwidgets_CN.git[0K[?25l$ git commit -m':art:'[0K[?25h[?25l$ git add .[0K[?25h[?25l
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/71AA5355/build_options.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in docs/libs/gitbook-2.6.7/css/plugin-bookdown.css.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in docs/libs/gitbook-2.6.7/css/plugin-fontsettings.css.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in docs/libs/gitbook-2.6.7/css/plugin-highlight.css.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in docs/libs/gitbook-2.6.7/css/plugin-search.css.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in docs/libs/gitbook-2.6.7/css/style.css.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in docs/libs/gitbook-2.6.7/js/app.min.js.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in docs/libs/gitbook-2.6.7/js/jquery.highlight.js.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in docs/libs/gitbook-2.6.7/js/lunr.js.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in docs/libs/gitbook-2.6.7/js/plugin-bookdown.js.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in docs/libs/gitbook-2.6.7/js/plugin-fontsettings.js.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in docs/libs/gitbook-2.6.7/js/plugin-search.js.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in docs/libs/gitbook-2.6.7/js/plugin-sharing.js.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in docs/libs/jquery-2.2.3/jquery.min.js.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in docs/style.css.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25h[?25l
-[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ git add .[0K[?25h[?25l$ git init[0K[?25h[?25l$ git push -u origin master[0K[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets_CN.git[0K[?25h[?25l$ git commit -m':art:'[0K[?25h[?25l
-[0K[?25h[master e112fc8] :art:[0K[?25l
- 31 files changed, 3137 insertions(+), 1 deletion(-)[0K
- rename {_book => docs}/_bookdown_files/htmlwidgets_cn_files/figure-html/ch1_1.png (100%)[0K
- rename {_book => docs}/e585b3e4ba8ee8af91e88085.html (100%)[0K
- rename {_book => docs}/e5ba8fe8a880.html (100%)[0K
- rename "_book/htmlwidgets\345\214\205\347\232\204\347\277\273\350\257\221.html" => "docs/htmlwidgets\345\214\205\347\232\204\347\277\273\35[0K0
-\257\221.html" (100%)[0K
- rename "_book/htmlwidgets\347\256\200\344\273\213.html" => "docs/htmlwidgets\347\256\200\344\273\213.html" (100%)[0K
- rename "_book/htmlwidgets\350\277\233\351\230\266.html" => "docs/htmlwidgets\350\277\233\351\230\266.html" (100%)[0K
- rename {_book => docs}/index.html (100%)[0K
- rename {_book => docs}/libs/gitbook-2.6.7/css/fontawesome/fontawesome-webfont.ttf (100%)[0K
- rename {_book => docs}/libs/gitbook-2.6.7/css/plugin-bookdown.css (100%)[0K
- rename {_book => docs}/libs/gitbook-2.6.7/css/plugin-fontsettings.css (100%)[0K
- rename {_book => docs}/libs/gitbook-2.6.7/css/plugin-highlight.css (100%)[0K
- rename {_book => docs}/libs/gitbook-2.6.7/css/plugin-search.css (100%)[0K
- rename {_book => docs}/libs/gitbook-2.6.7/css/style.css (100%)[0K
- rename {_book => docs}/libs/gitbook-2.6.7/js/app.min.js (100%)[0K
- rename {_book => docs}/libs/gitbook-2.6.7/js/jquery.highlight.js (100%)[0K
- rename {_book => docs}/libs/gitbook-2.6.7/js/lunr.js (100%)[0K
- rename {_book => docs}/libs/gitbook-2.6.7/js/plugin-bookdown.js (100%)[0K
- rename {_book => docs}/libs/gitbook-2.6.7/js/plugin-fontsettings.js (100%)[0K
- rename {_book => docs}/libs/gitbook-2.6.7/js/plugin-search.js (100%)[0K
- rename {_book => docs}/libs/gitbook-2.6.7/js/plugin-sharing.js (100%)[0K
- rename {_book => docs}/libs/jquery-2.2.3/jquery.min.js (100%)[0K
- rename {_book => docs}/search_index.json (100%)[0K
- rename {_book => docs}/section-5.html (100%)[0K
- rename {_book => docs}/section-6.html (100%)[0K
- rename {_book => docs}/sizinghtmlwidgets-sizing.html (100%)[0K
- rename {_book => docs}/style.css (100%)[0K
- create mode 100644 htmlwidgets_cn.log[0K
- create mode 100644 htmlwidgets_cn.pdf[0K
- create mode 100644 htmlwidgets_cn.tex[0K
-[0K[?25h[?25l
-[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ git commit -m':art:'[0K[?25h[?25l$ git add .[0K[?25h[?25l$ git init[0K[?25h[?25l$ git push -u origin master[0K[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets_CN.git[0K[?25h[?25l
-[0K[?25hfatal: remote origin already exists.[0K[?25l
-[0K[?25h[?25l
-[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git r[0K[?25he[0Km[0Ko[0Kt[0Ke[0K[14G[?25l$ git remote r[0K[?25hm[0K[17G[?25l$ git remote rm o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[?25l
-[0K[?25h[?25l
-[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ git remote rm origin[0K[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets_CN.git[0K[?25h[?25l
-[0K[?25h[?25l
-[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets_CN.git[0K[?25h[?25l$ git remote rm origin[0K[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets_CN.git[0K[?25h[?25l$ git commit -m':art:'[0K[?25h[?25l$ git add .[0K[?25h[?25l$ git init[0K[?25h[?25l$ git push -u origin master[0K[?25h[?25l
-[0K[?25hfatal: HttpRequestException encountered.[0K[?25l
-   发送请求时出错。[0K
-[0K[?25herror: cannot spawn rpostback-askpass: No such file or directory[0K[?25l
-[0K[?25hUsername for 'https://github.com':[0K[36G[?25lUsername for 'https://github.com': D[0K[?25ha[0Kt[0Ka[0KX[0Ku[0Kj[0Ki[0Kn[0Kg[0K[?25l
-[0K[?25herror: cannot spawn rpostback-askpass: No such file or directory[0K[?25l
-[0K[?25hPassword for 'https://DataXujing@github.com':[0K[47G[?25l
-[0K[?25hCounting objects: 10, done.[0K[?25l
-Delta compression using up to 4 threads.[0K
-Compressing objects: 100% (10/10), done.[0K
-Writing objects: 100% (10/10), 54.83 KiB | 9.14 MiB/s, done.[0K
-Total 10 (delta 3), reused 0 (delta 0)[0K
-[0K[?25h[?25lremote: Resolving deltas:  66% (2/3)[0K[1G[?25hremote: Resolving deltas: 100% (3/3), completed with 3 local objects.[0K[?25l
-[0K[?25hTo https://github.com/DataXujing/htmlwidgets_CN.git[0K[?25l
-   582ad69..e112fc8  master -> master[0K
-[0K[?25hBranch master set up to track remote branch master from origin.[0K[?25l
-[0K[?25h[?25l
-[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
-$[0K[3G[?25h[0m[0K]0;:/c/Users/Administrator.USER-20170417DX/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[?25l
-[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
-[?25l[0K[?25h$ g[0Ki[0Kt[0K[7G[?25l$ git i[0K[?25hn[0Ki[0Kt[0K[?25l
-[0K[?25hReinitialized existing Git repository in C:/Users/Administrator.USER-20170417DX/Des[0Kk[?25l
-top/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn/.git/[0K
-[0K[?25h[?25l
-[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25h[?25l
-[0K[?25hwarning: LF will be replaced by CRLF in .Rhistory.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/pcs/files-pane.pper.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/pcs/source-pane.pper.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/pcs/windowlayoutstate.[0Kp
-per.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/pcs/workbench-pane.ppe[0Kr
-.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/rmd-outputs.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/sources/prop/1EBA7629.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/71AA5355/sources/prop/380D4895.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/sources/prop/A2083AED.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/sources/prop/FF162251.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25h[?25l
-[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25hm[0K'[0K"[0K[?25l$ git commit -m'[0K[?25h;[0Ka[0Kr[0Kt[0K:[0K'[0K[?25l
-[0K[?25h[master 115a2cb] ;art:[0K[?25l
- 34 files changed, 341 insertions(+), 283 deletions(-)[0K
- rewrite .Rproj.user/71AA5355/console06/INDEX001 (100%)[0K
- delete mode 100644 .Rproj.user/71AA5355/sources/s-E73D5D56/64927F99[0K
- delete mode 100644 .Rproj.user/71AA5355/sources/s-E73D5D56/64927F99-contents[0K
- delete mode 100644 .Rproj.user/71AA5355/sources/s-E73D5D56/82C25C41[0K
- delete mode 100644 .Rproj.user/71AA5355/sources/s-E73D5D56/82C25C41-contents[0K
- delete mode 100644 .Rproj.user/71AA5355/sources/s-E73D5D56/995B7C77[0K
- delete mode 100644 .Rproj.user/71AA5355/sources/s-E73D5D56/995B7C77-contents[0K
- create mode 100644 .gitignore[0K
- rename .Rproj.user/71AA5355/sources/s-E73D5D56/lock_file => .nojekyll (100%)[0K
- delete mode 100644 docs/_bookdown_files/htmlwidgets_cn_files/figure-html/ch1_1.png[0K
- create mode 100644 docs/sizing-htmlwidgets-sizing.html[0K
-[0K[?25h[?25l
-[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git r[0K[?25he[0Km[0Ko[0Kt[0Ke[0K[14G[?25l$ git remote a[0K[?25hd[0Kd[0K[18G[?25l$ git remote add o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[25G[?25l$ git remote add origin h[0K[?25ht[0Kt[0Kp[0Ks[0K:[0K/[0K/[0Kg[0Ki[0Kt[0Kh[0Ku[0Kb[0K.[0Kc[0Ko[0Km[0K/[0KD[0Ka[0Kt[0Ka[0KX[0Ku[0Kj[0Ki[0Kn[0Kg[0K/[0Kh[0Kt[0Kn[0Kl[0Kw[0Ki[0Kd[0Kg[0Ke[0Kt[0Ks[0K_[0KC[0KN[0K.[0Kg[0Ki[0Kt[0K[?25l
-[0K[?25hfatal: remote origin already exists.[0K[?25l
-[0K[?25h[?25l
-[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git r[0K[?25he[0Km[0Ko[0Kt[0Ke[0K[14G[?25l$ git remote r[0K[?25hm[0K[17G[?25l$ git remote rm o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[?25l
-[0K[?25h[?25l
-[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ git remote rm origin[0K[?25h[?25l$ git remote add origin https://github.com/DataXujing/htnlwidgets_CN.git[0K[?25h[?25l
-[0K[?25h[?25l
-[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Ks[0Kh[0K[12G[?25l$ git push -[0K[?25hu[0K[15G[?25l$ git push -u o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[22G[?25l$ git push -u origin m[0K[?25ha[0Ks[0Kt[0Ke[0Kr[0K[?25l
-[0K[?25hfatal: HttpRequestException encountered.[0K[?25l
-   发送请求时出错。[0K
-[0K[?25herror: cannot spawn rpostback-askpass: No such file or directory[0K[?25l
-[0K[?25hUsername for 'https://github.com':[0K[36G[?25lUsername for 'https://github.com': D[0K[?25hta[0Kt[0Ka[0K-[0K-[0K-[0K=[0K[?25lUsername for 'https://github.com': Dtata---[0K[?25h[?25lUsername for 'https://github.com': Dtata--[0K[?25h[?25lUsername for 'https://github.com': Dtata-[0K[?25h[?25lUsername for 'https://github.com': Dtata[0K[?25h[?25lUsername for 'https://github.com': Dtat[0K[?25h[39G[?25lUsername for 'https://github.com': Dta[0K[?25h[?25lUsername for 'https://github.com': Dt[0K[?25h[?25lUsername for 'https://github.com': D[0K[?25ha[0Kt[0Ka[0KX[0Ku[0Kj[0Ki[0Kn[0Kg[0K[?25l
-[0K[?25herror: cannot spawn rpostback-askpass: No such file or directory[0K[?25l
-[0K[?25hPassword for 'https://DataXujing@github.com':[0K[47G[?25l
-[0K[?25hremote: Repository not found.[0K[?25l
-fatal: repository 'https://github.com/DataXujing/htnlwidgets_CN.git/' not found[0K
-[0K[?25h[?25l
-[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ git push -u origin master[0K[?25h[?25l$ git remote add origin https://github.com/DataXujing/htnlwidgets_CN.git[0K[?25h[72G[71G[70G[69G[68G[67G[66G[65G[64G[63G[62G[61G[60G[59G[?25l$ git remote add origin https://github.com/DataXujing/htnwidgets_CN.git[0K[58G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htwidgets_CN.git[0K[57G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmwidgets_CN.git[0K[58G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets_CN.git[0K[59G[?25h[?25l
-[0K[?25hfatal: remote origin already exists.[0K[?25l
-[0K[?25h[?25l
-[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets_CN.git[0K[?25h[?25l$ git push -u origin master[0K[?25h[?25l$ git remote add origin https://github.com/DataXujing/htnlwidgets_CN.git[0K[?25h[?25l$ git remote rm origin[0K[?25h[?25l
-[0K[?25h[?25l
-[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ git remote rm origin[0K[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets_CN.git[0K[?25h[?25l
-[0K[?25h[?25l
-[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets_CN.git[0K[?25h[?25l$ git remote rm origin[0K[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets_CN.git[0K[?25h[1G$ git push -u origin master[0K[?25l
-[0K[?25hfatal: HttpRequestException encountered.[0K[?25l
-   发送请求时出错。[0K
-[0K[?25herror: cannot spawn rpostback-askpass: No such file or directory[0K[?25l
-[0K[?25hUsername for 'https://github.com':[0K[36G[?25lUsername for 'https://github.com': D[0K[?25ha[0Kt[0Ka[0Kt[0K[?25lUsername for 'https://github.com': Data[0K[?25hX[0Ku[0Kj[0Ki[0Kn[0Kg[0K[?25l
-[0K[?25herror: cannot spawn rpostback-askpass: No such file or directory[0K[?25l
-[0K[?25hPassword for 'https://DataXujing@github.com':[0K[47G[?25l
-[0K[?25hCounting objects: 171, done.[0K[?25l
-[0K[?25hDelta compression using up to 4 threads.[0K[?25l
-Compressing objects:  87% (116/133)[0K[1G[?25hCompressing objects: 100% (133/133), done.[0K[?25l
-Writing objects:  28% (48/171)[0K[1G[?25h[?25lWriting objects:  54% (93/171)[0K[1G[?25hWriting objects: 100% (171/171), 389.60 KiB | 5.26 MiB/s, done.[0K[?25l
-Total 171 (delta 34), reused 0 (delta 0)[0K
-[0K[?25hremote: Resolving deltas: 100% (34/34), done.[0K[?25l
-[0K[?25hTo https://github.com/DataXujing/htmlwidgets_CN.git[0K[?25l
- * [new branch]      master -> master[0K
-[0K[?25hBranch master set up to track remote branch master from origin.[0K[?25l
-[0K[?25h[?25l
-[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
-$[0K[3G[?25h[0m[0K]0;:/c/Users/Administrator.USER-20170417DX/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[?25l
-[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
-[?25l$ if [ $# -eq 0 ]; then   echo "Start interactive shell";   exec "$BASH" --login -i; else   echo "Start shell with command";   exec "$BASH"[0K
--c "$*"; fi[0K[?25h[?25l[1A$ export -f docker[0K
-[0K[1A[19G[?25h[?25l$ docker () {   MSYS_NO_PATHCONV=1 docker.exe "$@"; }[0K
-[0K[1A[54G[?25h[?25l$ export -f docker[0K
-[0K[1A[19G[?25h[?25l$ if [ $# -eq 0 ]; then   echo "Start interactive shell";   exec "$BASH" --login -i; else   echo "Start shell with command";   exec "$BASH"[0K
--c "$*"; fi[0K[?25h[?25l[1A[12G[?25h[?25l$[0K
-[0K[1A[3G[?25h[?25l$ g[0K
-[0K[1A[4G[?25h[?25l$ gi[0K
-[0K[1A[5G[?25h[?25l$ git[0K
-[0K[1A[6G[?25h[7G[?25l$ git a[0K
-[0K[1A[8G[?25h[?25l$ git ad[0K
-[0K[1A[9G[?25h[?25l$ git add[0K
-[0K[1A[10G[?25h[11G[?25l$ git add .[0K
-[0K[1A[12G[?25h[?25l
-[?25hwarning: LF will be replaced by CRLF in .Rproj.user/71AA5355/pcs/files-pane.pper.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/pcs/source-pane.pper.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/pcs/windowlayoutstate.pper.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/71AA5355/rmd-outputs.[0K[?25l
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/sources/prop/A2083AED.[0K
-The file will have its original line endings in your working directory.[0K
-warning: LF will be replaced by CRLF in .Rproj.user/71AA5355/sources/prop/FF162251.[0K
-The file will have its original line endings in your working directory.[0K
-[0K[?25h[?25l
-[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25hp[0K[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25hm[0K'[0K:[0Ka[0Kr[0Kt[0K:[0K'[0K[?25l
-[0K[?25h[master 3e5b23e] :art:[0K[?25l
- 13 files changed, 119 insertions(+), 19 deletions(-)[0K
- delete mode 100644 .Rhistory[0K
- rewrite .Rproj.user/71AA5355/console06/INDEX001 (86%)[0K
- create mode 100644 docs/libs/pic/ch1_1.png[0K
-[0K[?25h[?25l
-[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git r[0K[?25he[0Km[0Ko[0Kt[0Ke[0K[14G[?25l$ git remote a[0K[?25hd[0Kd[0K[18G[?25l$ git remote add o[0K[?25hr[0K[?25l$ git remote add o[0K[?25h[?25l$ git remote add[0K[18G[?25h[17G[?25l$ git remote ad[0K[?25h[?25l$ git remote a[0K[?25h[?25l$ git remote[0K[14G[?25h[13G[?25l$ git remot[0K[?25h[?25l$ git remo[0K[?25h[?25l$ git rem[0K[?25h[?25l$ git re[0K[?25h[?25l$ git r[0K[?25h[?25l$ git[0K[7G[?25h[6G[?25l$ gi[0K[?25h[?25l$ g[0K[?25h[?25l$[0K[3G[?25h[?25l$ git commit -m':art:'[0K[?25h[?25l$ git add .[0K[?25h[?25l$ if [ $# -eq 0 ]; then   echo "Start interactive shell";   exec "$BASH" --login -i; else   echo "Start shell with command";   exec "$BASH"[0K
--c "$*"; fi[0K[?25h[?25l[1A$ export -f docker[0K
-[0K[1A[19G[?25h[?25l$ docker () {   MSYS_NO_PATHCONV=1 docker.exe "$@"; }[0K
-[0K[1A[54G[?25h[?25l$ cd[0K
-[0K[1A[5G[?25h[?25l$ echo[0K
-[0K[1A[7G[?25h[?25l$ echo "For help getting started, check out the docs at https://docs.docker.com"[0K
-[0K[1A[81G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHINE} ip ${VM})${NC}"[0K
-[0K[1A[134G[?25h[?25l$ EOF[0K
-[0K[1A[6G[?25h[?25l$               \____\_______/[0K
-[0K[1A[31G[?25h[?25l$              \    \         __/[0K
-[0K[1A[34G[?25h[?25l$            \______ o           __/[0K
-[0K[1A[37G[?25h[?25l$       ~~~ {~~ ~~~~ ~~~ ~~~~ ~~~ ~ /  ===- ~~~[0K
-[0K[1A[48G[?25h[?25l$            \______ o           __/[0K
-[0K[1A[37G[?25h[?25l$              \    \         __/[0K
-[0K[1A[34G[?25h[?25l$               \____\_______/[0K
-[0K[1A[31G[?25h[?25l$ EOF[0K
-[0K[1A[6G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHINE} ip ${VM})${NC}"[0K
-[0K[1A[134G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHINE} ip ${VM})${NC}[0K
-[0K[1A[133G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHINE} ip ${VM})${NC[0K
-[0K[1A[132G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHINE} ip ${VM})${N[0K
-[0K[1A[131G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHINE} ip ${VM})${[0K
-[0K[1A[130G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHINE} ip ${VM})$[0K
-[0K[1A[129G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHINE} ip ${VM})[0K
-[0K[1A[128G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHINE} ip ${VM}[0K
-[0K[1A[127G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHINE} ip ${VM[0K
-[0K[1A[126G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHINE} ip ${V[0K
-[0K[1A[125G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHINE} ip ${[0K
-[0K[1A[124G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHINE} ip $[0K
-[0K[1A[123G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHINE} ip[0K
-[0K[1A[122G[?25h[121G[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHINE} i[0K
-[0K[1A[120G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHINE}[0K
-[0K[1A[119G[?25h[118G[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHINE[0K
-[0K[1A[117G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACHIN[0K
-[0K[1A[116G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MACH[0K
-[0K[1A[114G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_MA[0K
-[0K[1A[112G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_M[0K
-[0K[1A[111G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER_[0K
-[0K[1A[109G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKER[0K
-[0K[1A[109G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCKE[0K
-[0K[1A[108G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOCK[0K
-[0K[1A[107G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DOC[0K
-[0K[1A[106G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${DO[0K
-[0K[1A[105G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${D[0K
-[0K[1A[104G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$(${[0K
-[0K[1A[103G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$($[0K
-[0K[1A[102G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$([0K
-[0K[1A[101G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}$[0K
-[0K[1A[100G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN}[0K
-[0K[1A[99G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREEN[0K
-[0K[1A[98G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GREE[0K
-[0K[1A[97G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GRE[0K
-[0K[1A[96G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${GR[0K
-[0K[1A[95G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${G[0K
-[0K[1A[94G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP ${[0K
-[0K[1A[93G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP $[0K
-[0K[1A[92G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with IP[0K
-[0K[1A[91G[?25h[90G[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with I[0K
-[0K[1A[89G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine with[0K
-[0K[1A[88G[?25h[87G[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine wit[0K
-[0K[1A[86G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine wi[0K
-[0K[1A[85G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine w[0K
-[0K[1A[84G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machine[0K
-[0K[1A[83G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machin[0K
-[0K[1A[81G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} machi[0K
-[0K[1A[80G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} mach[0K
-[0K[1A[79G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} ma[0K
-[0K[1A[77G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC} m[0K
-[0K[1A[76G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC}[0K
-[0K[1A[75G[?25h[74G[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${NC[0K
-[0K[1A[73G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${N[0K
-[0K[1A[72G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}${[0K
-[0K[1A[71G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}$[0K
-[0K[1A[70G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM}[0K
-[0K[1A[69G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${VM[0K
-[0K[1A[68G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${V[0K
-[0K[1A[67G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}${[0K
-[0K[1A[66G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}$[0K
-[0K[1A[65G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN}[0K
-[0K[1A[64G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREEN[0K
-[0K[1A[63G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GREE[0K
-[0K[1A[62G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GRE[0K
-[0K[1A[61G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${GR[0K
-[0K[1A[60G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${G[0K
-[0K[1A[59G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the ${[0K
-[0K[1A[58G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the $[0K
-[0K[1A[57G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use the[0K
-[0K[1A[56G[?25h[55G[?25l$ echo -e "${BLUE}docker${NC} is configured to use th[0K
-[0K[1A[54G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use t[0K
-[0K[1A[53G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to use[0K
-[0K[1A[52G[?25h[51G[?25l$ echo -e "${BLUE}docker${NC} is configured to us[0K
-[0K[1A[50G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to u[0K
-[0K[1A[49G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured to[0K
-[0K[1A[48G[?25h[47G[?25l$ echo -e "${BLUE}docker${NC} is configured t[0K
-[0K[1A[46G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configured[0K
-[0K[1A[45G[?25h[44G[?25l$ echo -e "${BLUE}docker${NC} is configure[0K
-[0K[1A[43G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configur[0K
-[0K[1A[41G[?25h[?25l$ echo -e "${BLUE}docker${NC} is configu[0K
-[0K[1A[41G[?25h[?25l$ echo -e "${BLUE}docker${NC} is config[0K
-[0K[1A[40G[?25h[?25l$ echo -e "${BLUE}docker${NC} is confi[0K
-[0K[1A[39G[?25h[?25l$ echo -e "${BLUE}docker${NC} is conf[0K
-[0K[1A[38G[?25h[?25l$ echo -e "${BLUE}docker${NC} is con[0K
-[0K[1A[37G[?25h[?25l$ echo -e "${BLUE}docker${NC} is co[0K
-[0K[1A[36G[?25h[?25l$ echo -e "${BLUE}docker${NC} is c[0K
-[0K[1A[35G[?25h[?25l$ echo -e "${BLUE}docker${NC} is[0K
-[0K[1A[34G[?25h[33G[?25l$ echo -e "${BLUE}docker${NC} i[0K
-[0K[1A[32G[?25h[?25l$ echo -e "${BLUE}docker${NC}[0K
-[0K[1A[31G[?25h[30G[?25l$ echo -e "${BLUE}docker${NC[0K
-[0K[1A[29G[?25h[?25l$ echo -e "${BLUE}docker${N[0K
-[0K[1A[28G[?25h[?25l$ echo -e "${BLUE}docker${[0K
-[0K[1A[27G[?25h[?25l$ echo -e "${BLUE}docker$[0K
-[0K[1A[26G[?25h[?25l$ echo -e "${BLUE}docker[0K
-[0K[1A[25G[?25h[?25l$ echo -e "${BLUE}docke[0K
-[0K[1A[24G[?25h[?25l$ echo -e "${BLUE}dock[0K
-[0K[1A[23G[?25h[?25l$ echo -e "${BLUE}doc[0K
-[0K[1A[22G[?25h[?25l$ echo -e "${BLUE}do[0K
-[0K[1A[21G[?25h[?25l$ echo -e "${BLUE}d[0K
-[0K[1A[20G[?25h[?25l$ echo -e "${BLUE}[0K
-[0K[1A[19G[?25h[?25l$ echo -e "${BLUE[0K
-[0K[1A[18G[?25h[?25l$ echo -e "${BLU[0K
-[0K[1A[17G[?25h[?25l$ echo -e "${BL[0K
-[0K[1A[16G[?25h[?25l$ echo -e "${B[0K
-[0K[1A[15G[?25h[?25l$ echo -e "${[0K
-[0K[1A[14G[?25h[?25l$ echo -e "$[0K
-[0K[1A[13G[?25h[?25l$ echo -e "[0K
-[0K[1A[12G[?25h[?25l$ echo -e[0K
-[0K[1A[11G[?25h[10G[?25l$ echo -[0K
-[0K[1A[9G[?25h[?25l$ echo[0K
-[0K[1A[8G[?25h[7G[?25l$ ech[0K
-[0K[1A[6G[?25h[?25l$ ec[0K
-[0K[1A[5G[?25h[?25l$ e[0K
-[0K[1A[4G[?25h[?25l$[0K
-[0K[1A[3G[?25h[?25l$ g[0K
-[0K[1A[4G[?25h[?25l$ gi[0K
-[0K[1A[5G[?25h[?25l$ git[0K
-[0K[1A[6G[?25h[7G[?25l$ git t[0K
-[0K[1A[8G[?25h[?25l$ git[0K
-[0K[1A[7G[?25h[?25l$ git r[0K
-[0K[1A[8G[?25h[?25l$ git re[0K
-[0K[1A[9G[?25h[?25l$ git rem[0K
-[0K[1A[10G[?25h[?25l$ git remo[0K
-[0K[1A[11G[?25h[?25l$ git remot[0K
-[0K[1A[12G[?25h[?25l$ git remote[0K
-[0K[1A[13G[?25h[14G[?25l$ git remote a[0K
-[0K[1A[15G[?25h[?25l$ git remote ad[0K
-[0K[1A[16G[?25h[?25l$ git remote add[0K
-[0K[1A[17G[?25h[18G[?25l$ git remote add o[0K
-[0K[1A[19G[?25h[?25l$ git remote add or[0K
-[0K[1A[20G[?25h[?25l$ git remote add ori[0K
-[0K[1A[21G[?25h[?25l$ git remote add orig[0K
-[0K[1A[22G[?25h[?25l$ git remote add origi[0K
-[0K[1A[23G[?25h[?25l$ git remote add origin[0K
-[0K[1A[24G[?25h[25G[?25l$ git remote add origin h[0K
-[0K[1A[26G[?25h[?25l$ git remote add origin ht[0K
-[0K[1A[27G[?25h[?25l$ git remote add origin htt[0K
-[0K[1A[28G[?25h[?25l$ git remote add origin http[0K
-[0K[1A[29G[?25h[?25l$ git remote add origin https[0K
-[0K[1A[30G[?25h[?25l$ git remote add origin https:[0K
-[0K[1A[31G[?25h[?25l$ git remote add origin https:/[0K
-[0K[1A[32G[?25h[?25l$ git remote add origin https://[0K
-[0K[1A[33G[?25h[?25l$ git remote add origin https://f[0K
-[0K[1A[34G[?25h[?25l$ git remote add origin https://fi[0K
-[0K[1A[35G[?25h[?25l$ git remote add origin https://fit[0K
-[0K[1A[36G[?25h[?25l$ git remote add origin https://fi[0K
-[0K[1A[35G[?25h[?25l$ git remote add origin https://f[0K
-[0K[1A[34G[?25h[?25l$ git remote add origin https://[0K
-[0K[1A[33G[?25h[?25l$ git remote add origin https://g[0K
-[0K[1A[34G[?25h[?25l$ git remote add origin https://gi[0K
-[0K[1A[35G[?25h[?25l$ git remote add origin https://git[0K
-[0K[1A[36G[?25h[?25l$ git remote add origin https://gith[0K
-[0K[1A[37G[?25h[?25l$ git remote add origin https://githu[0K
-[0K[1A[38G[?25h[?25l$ git remote add origin https://github[0K
-[0K[1A[39G[?25h[?25l$ git remote add origin https://github.[0K
-[0K[1A[40G[?25h[?25l$ git remote add origin https://github.c[0K
-[0K[1A[41G[?25h[?25l$ git remote add origin https://github.co[0K
-[0K[1A[42G[?25h[?25l$ git remote add origin https://github.com[0K
-[0K[1A[43G[?25h[?25l$ git remote add origin https://github.com/[0K
-[0K[1A[44G[?25h[?25l$ git remote add origin https://github.com/D[0K
-[0K[1A[45G[?25h[?25l$ git remote add origin https://github.com/Da[0K
-[0K[1A[46G[?25h[?25l$ git remote add origin https://github.com/Dat[0K
-[0K[1A[47G[?25h[?25l$ git remote add origin https://github.com/Data[0K
-[0K[1A[48G[?25h[?25l$ git remote add origin https://github.com/DataX[0K
-[0K[1A[49G[?25h[?25l$ git remote add origin https://github.com/DataXu[0K
-[0K[1A[50G[?25h[?25l$ git remote add origin https://github.com/DataXuj[0K
-[0K[1A[51G[?25h[?25l$ git remote add origin https://github.com/DataXuji[0K
-[0K[1A[52G[?25h[?25l$ git remote add origin https://github.com/DataXujin[0K
-[0K[1A[53G[?25h[?25l$ git remote add origin https://github.com/DataXujing[0K
-[0K[1A[54G[?25h[?25l$ git remote add origin https://github.com/DataXujing/[0K
-[0K[1A[55G[?25h[?25l$ git remote add origin https://github.com/DataXujing/h[0K
-[0K[1A[56G[?25h[?25l$ git remote add origin https://github.com/DataXujing/hr[0K
-[0K[1A[57G[?25h[?25l$ git remote add origin https://github.com/DataXujing/h[0K
-[0K[1A[56G[?25h[?25l$ git remote add origin https://github.com/DataXujing/ht[0K
-[0K[1A[57G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htm[0K
-[0K[1A[58G[?25h[?25l$ git remote add origin https://github.com/DataXujing/html[0K
-[0K[1A[59G[?25h[?25l$ git remote add origin https://github.com/DataXujing/html.[0K
-[0K[1A[60G[?25h[?25l$ git remote add origin https://github.com/DataXujing/html[0K
-[0K[1A[59G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlw[0K
-[0K[1A[60G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwi[0K
-[0K[1A[61G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwid[0K
-[0K[1A[62G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidg[0K
-[0K[1A[63G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidge[0K
-[0K[1A[64G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidget[0K
-[0K[1A[65G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets[0K
-[0K[1A[66G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets_[0K
-[0K[1A[67G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets_C[0K
-[0K[1A[68G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets_CN[0K
-[0K[1A[69G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets_CN.[0K
-[0K[1A[70G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets_CN.g[0K
-[0K[1A[71G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets_CN.gi[0K
-[0K[1A[72G[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets_CN.git[0K
-[0K[1A[73G[?25h[?25l
-[?25hfatal: remote origin already exists.[0K[?25l
-[0K[?25h[?25l
-[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git r[0K[?25he[0Km[0Ko[0Kt[0Ke[0K[14G[?25l$ git remote r[0K[?25hm[0K[17G[?25l$ git remote rm o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[?25l
-[0K[?25h[?25l
-[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ git remote rm origin[0K[?25h[?25l$ git remote add origin https://github.com/DataXujing/htmlwidgets_CN.git[0K[?25h[?25l
-[0K[?25h[?25l
-[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Ks[0Kh[0K[12G[?25l$ git push -[0K[?25hu[0K[15G[?25l$ git push -u o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[22G[?25l$ git push -u origin m[0K[?25ha[0Ks[0Kt[0Ke[0Kr[0K[?25l
-[0K[?25hfatal: HttpRequestException encountered.[0K[?25l
-   发送请求时出错。[0K
-[0K[?25herror: cannot spawn rpostback-askpass: No such file or directory[0K[?25l
-[0K[?25hUsername for 'https://github.com':[0K[36G[?25lUsername for 'https://github.com': D[0K[?25ha[0Kt[0Ka[0KX[0Ku[0Kj[0Ki[0Kn[0Kg[0K[?25l
-[0K[?25herror: cannot spawn rpostback-askpass: No such file or directory[0K[?25l
-[0K[?25hPassword for 'https://DataXujing@github.com':[0K[47G[?25l
-[0K[?25hCounting objects: 27, done.[0K[?25l
-Delta compression using up to 4 threads.[0K
-Compressing objects: 100% (21/21), done.[0K
-Writing objects: 100% (27/27), 3.28 KiB | 838.00 KiB/s, done.[0K
-Total 27 (delta 11), reused 0 (delta 0)[0K
-[0K[?25h[?25lremote: Resolving deltas:   9% (1/11)[0K[1G[?25hremote: Resolving deltas: 100% (11/11), completed with 11 local objects.[0K[?25l
-[0K[?25hTo https://github.com/DataXujing/htmlwidgets_CN.git[0K[?25l
-   115a2cb..3e5b23e  master -> master[0K
-[0K[?25hBranch master set up to track remote branch master from origin.[0K[?25l
-[0K[?25h[?25l
-[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
-$[0K[3G[?25h[0m[0K]0;:/c/Users/Administrator.USER-20170417DX/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[?25l
-[0;32mAdministrator@SJFX-04 [0;35m [0;33m~/Desktop/htmlwidgets/htmlwidgets_CN/htmlwidgets_cn[0;36m (master)[0m[0K
-[?25l$ g[0K[?25ht[0K[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25h[?25l
-[0K[?25h

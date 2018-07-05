@@ -1,17 +1,226 @@
-# HTML控件：高级主题{#htmlwidgets-advanced}
+# HTML控件：高级主题 {#htmlwidgets-advanced}
 
-## 概述
+## 本节概述
+
+本部分将介绍创建控件的几个主要方面，这些控件并不是所有控件都需要的，但他是获得绑定到某些类型的JavaScript库才能正常工作的重要部分。涵盖的主题包括：
+
++ 将R对象的JSON表示转换为JavaScript库所需的表示（例如，R数据帧到D3数据集）。
+
++ 在JavaScript绑定中跟踪特定于实例的控件数据。
+
++ 将JavaScript函数从R传递到JavaScript（例如用户提供的格式化或绘图功能）。
+
++ 生成自定义HTML以封装控件（默认为`<div >`但一些库需要不同的元素，例如`<SPAN >`）
 
 ## 数据变换
+
+R对象传递一个参数x给createWidget()函数，并使用内部函数htmlwidgets:::toJSON()转换成JSON字符串，默认情况下，它基本上是jsonlite::toJSON()的包装函数。但是，有时这种表示并不是您所连接的JavaScript库所要求的。有两个JavaScript函数可以用来转换JSON数据。
 
 
 ### HTMLWidgets.dataframeToD3()
 
+R数据框是'long form'(长型数据:数组名加一个向量)然而d3需要一个'wide form'(宽型数据:每一行都有以键值对形式表示)，在R中使用dataframeToD3()函数就可以把数据变化成JavaScript对用格式的数据
+
+用一个例子来说明R的long-form数据
+
+```javascript
+{
+  "Sepal.Length": [5.1, 4.9, 4.7],
+  "Sepal.Width": [3.5, 3, 3.2],
+  "Petal.Length": [1.4, 1.4, 1.3],
+  "Petal.Width": [0.2, 0.2, 0.2],
+  "Species": ["setosa", "setosa", "setosa"]
+} 
+```
+
+使用HTMLWidgets.dataframeToD3()，将会变成：
+
+```javascript
+[
+  {
+    "Sepal.Length": 5.1,
+    "Sepal.Width": 3.5,
+    "Petal.Length": 1.4,
+    "Petal.Width": 0.2,
+    "Species": "setosa"
+  },
+  {
+    "Sepal.Length": 4.9,
+    "Sepal.Width": 3,
+    "Petal.Length": 1.4,
+    "Petal.Width": 0.2,
+    "Species": "setosa"
+  },
+  {
+    "Sepal.Length": 4.7,
+    "Sepal.Width": 3.2,
+    "Petal.Length": 1.3,
+    "Petal.Width": 0.2,
+    "Species": "setosa"
+  }
+] 
+```
+
+作为一个实际例子，simpleNetwork接受包含R侧的网络链接的数据框，然后将其转换为JavaScript renderValue函数内的D3表示：
+
+```javascript
+renderValue: function(x) {
+
+  // convert links data frame to d3 friendly format
+  var links = HTMLWidgets.dataframeToD3(x.links);
+  
+  // ... use the links, etc ...
+
+}
+```
+
 ### HTMLWidgets.transposeArray2D()
+
+有时二维数组需要类似的换位。为此，提供了transposeArray2D()函数。下面是一个示例数组：
+
+```javascript
+[
+  [5.1, 4.9, 4.7, 4.6, 5, 5.4, 4.6, 5],
+  [3.5, 3, 3.2, 3.1, 3.6, 3.9, 3.4, 3.4],
+  [1.4, 1.4, 1.3, 1.5, 1.4, 1.7, 1.4, 1.5],
+  [0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.3, 0.2],
+  ["setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa", "setosa"]
+] 
+```
+HTMLWidgets.transposeArray2D()把其变换成：
+
+```javascript
+[
+  [5.1, 3.5, 1.4, 0.2, "setosa"],
+  [4.9, 3, 1.4, 0.2, "setosa"],
+  [4.7, 3.2, 1.3, 0.2, "setosa"],
+  [4.6, 3.1, 1.5, 0.2, "setosa"],
+  [5, 3.6, 1.4, 0.2, "setosa"],
+  [5.4, 3.9, 1.7, 0.4, "setosa"],
+  [4.6, 3.4, 1.4, 0.3, "setosa"],
+  [5, 3.4, 1.5, 0.2, "setosa"]
+] 
+```
+
+dygraphs控件就使用了这种变换：
+
+```javascript
+renderValue: function(x) {
+   
+    // ... code excluded ...
+    
+    // transpose array
+    x.attrs.file = HTMLWidgets.transposeArray2D(x.attrs.file);
+    
+    // ... more code excluded ...
+}
+```
+
 
 ### 自定义JSON串行化器
 
+当htmlwidgets中的默认JSON序列化器无法按您预期的方式工作时，您可能会发现需要自定义控件数据的JSON序列化。对于实现控件的包的作者，JSON序列化有两个定制级别：您可以自定义jsonlite::toJSON()的参数的默认值，或者只需定制整个函数。
+
+1. jsonlite::toJSON()有很多参数，并且我们已经改变了它的很多默认值。下面是我们在htmlwidgets中使用的JSON序列化器：
+
+```r
+function (x, ..., dataframe = "columns", null = "null", na = "null", 
+    auto_unbox = TRUE, digits = getOption("shiny.json.digits", 
+        16), use_signif = TRUE, force = TRUE, POSIXt = "ISO8601", 
+    UTC = TRUE, rownames = FALSE, keep_vec_names = TRUE, strict_atomic = TRUE) 
+{
+    if (strict_atomic) 
+        x <- I(x)
+    jsonlite::toJSON(x, dataframe = dataframe, null = null, na = na, 
+        auto_unbox = auto_unbox, digits = digits, use_signif = use_signif, 
+        force = force, POSIXt = POSIXt, UTC = UTC, rownames = rownames, 
+        keep_vec_names = keep_vec_names, json_verbatim = TRUE, 
+        ...)
+}
+```
+
+例如，我们通过列而非行将数据框转化为JSON(后者是jsonlite::toJSON的默认设置)，如果要更改任何参数的默认值，可以将属性TOJSON ARGS附加到将被传递给createWidgets()的widgets数据。例如：
+
+```r
+fooWidget <- function(data, name, ...) {
+  # ... process the data ...
+  params <- list(foo = data, bar = TRUE)
+  # customize toJSON() argument values
+  attr(params, 'TOJSON_ARGS') <- list(digits = 7, na = 'string')
+  htmlwidgets::createWidget(name, x = params, ...)
+}
+```
+
+在上面的例子中，我们将数字的默认值从16改为7，NA从NULL改为String.您是否需要向用户公开这样的定制，这取决于包的作者。例如，您可以在控件中附加一个参数，这样用户就可以自定义JSON序列化程序的行为：
+
+```r
+fooWidget <- function(data, name, ..., JSONArgs = list(digits = 7)) {
+  # ... process the data ...
+  params <- list(foo = data, bar = TRUE)
+  # customize toJSON() argument values
+  attr(params, 'TOJSON_ARGS') <- JSONArgs
+  htmlwidgets::createWidget(name, x = params, ...)
+}
+```
+还可以使用全局选项htmlwidgets.TOJSON_ARGS为当前会话中的所有控件自定义JSON序列化参数，例如：
+
+```r
+options(htmlwidgets.TOJSON_ARGS = list(digits = 7, pretty = TRUE))
+```
+
+
+2. 如果不想使用jsonlite,可以通过将属性TOJSON_FUNC附加到widget数据，完全重写序列化函数，例如：
+
+```r
+fooWidget <- function(data, name, ...) {
+  # ... process the data ...
+  params <- list(foo = data, bar = TRUE)
+  # customize the JSON serializer
+  attr(params, 'TOJSON_FUNC') <- MY_OWN_JSON_FUNCTION
+  htmlwidgets::createWidget(name, x = params, ...)
+}
+```
+这里MY_OWN_JSON_FUNCTION函数可以是一个将R对象转换为JSON的任意R函数。如果您还指定了TOJSON_ARGS属性，它也将传递给您的自定义JSON函数。注意这些自定义JSON序列化程序的特性要求在Shiny的应用程序中呈现控件时，Shiny的版本大于0.111。
 
 ## 传递JavaScript函数
 
+正如您所期望的，从R传递到JavaScript的字符向量被转换成JavaScript字符串。但是，如果您希望允许用户提供自定义的JavaScript函数用于格式化、绘图或事件处理，该怎么办？对于这种情况，htmlwidgets包包含一个JS()函数，它允许您在客户端接收到一个字符值时将其作为JavaScript进行评估。
+
+例如，dygraphs控件包括允许用户为各种上下文提供回调函数的dyCallbacks函数。这些回调被标记为包含JavaScript，以便它们可以在客户端上转换成实际的JavaScript函数：
+
+```r
+callbacks <- list(
+  clickCallback = JS(clickCallback)
+  drawCallback = JS(drawCallback)
+  highlightCallback = JS(highlightCallback)
+  pointClickCallback = JS(pointClickCallback)
+  underlayCallback = JS(underlayCallback)
+)
+```
+
+另一个例子是DT包控件，用户可以在加载和初始化表之后制定一个带有JavaScript的intCallback来执行。
+
+```r
+datatable(head(iris, 20), options = list(
+  initComplete = JS(
+    "function(settings, json) {",
+    "$(this.api().table().header()).css({'background-color': '#000', 'color': '#fff'});",
+    "}")
+))
+```
+
+如果将多个参数传递给JS(),（例如上面的示例中），它们将被级联成由`\n`分隔的单个字符串。
+
 ## 自定义控件HTML
+
+通常，控件的HTML“外壳”只是一个`<div>`元素，而这是对应于新的控件的默认行为，而这些控件不是以其他方式指定的。然而有时你需要不同的标签类型，例如sparkline控件中需要`<span>`，因此实现以下自定义HTML生成函数：
+
+```r
+sparkline_html <- function(id, style, class, ...){
+  tags$span(id = id, class = class)
+}
+```
+
+请注意，这个函数是在由widgetname_html实现的小程序包中查找的，因此它不必从包中正式导出或以其他方式注册到htmlwidgets。
+
+大多数的控件都不需要自定义HTML函数，但是如果需要为你的控件生成自定义的HTML（例如你需要一个`<input>`或`<span>`而不是一个`<div>`),那么你应该是用htmltools包。

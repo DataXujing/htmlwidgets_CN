@@ -4,27 +4,478 @@
 
 ## htmlwidgets包函数
 
-+ htmlwidgets-package 
+### htmlwidgets-package 
 
-+ createWidget 
+使用R创建HTML控件的包的信息
 
-+ getDependency 
+> **描述**
 
-+ htmlwidgets-shiny 
+htmlwidgets包提供了一个简单的创建R链接JavaScript包的框架，使用该框架创建控件可以：
 
-+ JS 
+1. 在R控制台上使用JavaScript可视化库，就像绘图一样
 
-+ onRender 
+2. 在R Markdown文档和Shiny Web应用程序中嵌入控件
 
-+ onStaticRenderComplete .
+3. 对保存网页，共享分析成果
 
-+ prependContent 
+在R中可以参考下面文档(这些说明文档译者已经在前三章翻译)
 
-+ saveWidget 
+```r
+vignette("develop_intro", package = "htmlwidgets") #第一章
+vignette("develop_sizing", package = "htmlwidgets") #第二章
+vignette("develop_advanced", package = "htmlwidgets") #第三章
+```
 
-+ scaffoldWidget 
+包的源码地址：<https://github.com/ramnathv/htmlwidgets>
 
-+ setWidgetIdSeed 
+> **作者**
+
+Ramnath Vaidyanathan, Joe Cheng, JJ Allaire, and Yihui Xie
+
+### createWidget 
+
+创建HTML控件函数
+
+> **描述**
+
+基于控件的YAML文件和给定的JavaScript库创建一个HTML控件。
+
+> **用法**
+
+```r
+createWidget(name, x, width = NULL, height = NULL,
+  sizingPolicy = htmlwidgets::sizingPolicy(), package = name,
+  dependencies = NULL, elementId = NULL, preRenderHook = NULL)
+```
+
+> **参数**
+
+name: 控件名称(要和YAML和JS文档中的名称保持一致)
+
+x: 传入控件的数据，要转化为JSON格式的数据。
+
+width: 控件的宽度，默认值是NULL,默认会自适应调整宽度
+
+height: 控件的高度，默认值是NULL,默认会自适应调整高度
+
+sizingPoicy: 调整控件大小的策略，详见第二章
+
+package: 定义控件所在的包（默认就是控件的名称）
+
+dependencies: 控件额外的依赖(YAML文件定义之外)，特别是对于一些动态的依赖选项是有必要的
+
+elementID: 使用控件的显示元素ID(而不是自动生成的元素ID)
+,如果您有JavaScript与特定的实例控件交互这是很有必要的
+
+preRenderHook: 一个运行在控件上的函数。
+
+> **细节**
+
+更多细节可以参考第一章
+
+> **值**
+
+htmlwidgets对象,这将在不同的上下文中智能地将自己打印到HTML中。
+包括R控制台，在R Markdown文档中，以及在Shiny的输出绑定中。
 
 
-+ sizingPolicy 
+### getDependency 
+
+获取htmlwidgets的JS和CSS依赖关系
+
+> **描述**
+
+获取htmlwidgets的JS和CSS依赖关系
+
+> **用法**
+
+```r
+getDependency(name, package = name)
+```
+> **参数**
+
+name: 控件的名称
+
+package: 包的名称，默认是控件的名称
+
+
+### htmlwidgets-shiny 
+
+Shiny连接HTML控件
+
+> **描述**
+
+创建在Shiny中使用的output和render函数
+
+> **用法**
+
+```r
+shinyWidgetOutput(outputId, name, width, height, package = name,
+  inline = FALSE, reportSize = FALSE)
+  
+shinyRenderWidget(expr, outputFunction, env, quoted)
+```
+
+> **参数**
+
+outputId: 输出对应的ID
+
+name: 控件创建的名称
+
+width,height: 必须是有效的CSS单元(像："100%","400px","auto") 或者是数字
+
+package: 包含控件的包
+
+inline: 对输出使用一个行内的标签(`<spqn>`)
+
+reportSize: 应该在Shiny的会话客户端数据中报告控件的容器大小吗？
+
+expr: 一个产生HTML控件的而表达式
+
+outputFunction: Shiny输出函数，与render函数对应
+
+env: 在什么环境变量下计算expr
+
+quoted: expr是引用的表达式（用quote()）吗？这是有用的，如果你想保存
+变量中的表达式。
+
+> **细节**
+
+这些功能放在控件内部，为Shiny创建控件和渲染控件所用，详细的可见下面的例子。
+
+> **值**
+
+创建Shiny可用的output和render函数对
+
+> **例子**
+
+```r
+# shiny output binding for a widget named 'foo'
+fooOutput <- function(outputId, width = "100%", height = "400px") {
+    htmlwidgets::shinyWidgetOutput(outputId, "foo", width, height)
+  }
+  
+# shiny render function for a widget named 'foo'
+renderFoo <- function(expr, env = parent.frame(), quoted = FALSE) {
+    if (!quoted) { expr <- substitute(expr) } # force quoted
+    htmlwidgets::shinyRenderWidget(expr, fooOutput, env, quoted = TRUE)
+  }
+```
+
+### JS 
+
+把R中的字符串转化成合法的JavaScript脚本
+
+> **描述**
+
+JS()函数把接受到的字符向量转化成客户端的JavaScript脚本
+
+> **用法**
+
+```r
+JS(...)
+```
+
+> **参数**
+
+...: 一个字符串，字符串的内容就是JavaScript脚本
+
+> **作者**
+
+Yihui Xie
+
+> **例子**
+
+```r
+library(htmlwidgets)
+JS('1 + 1')
+list(x = JS('function(foo) {return foo;}'), y = 1:10)
+JS('function(x) {', 'return x + 1;', '}')
+```
+
+### onRender 
+
+渲染后执行自定义的JavaScript代码
+
+> **描述**
+
+使用这个函数来补充控件内置的JavaScript渲染逻辑
+自定义JavaScript代码，只针对这个特定的控件对象。
+
+> **用法**
+
+```r
+onRender(x, jsCode, data = NULL)
+```
+
+> **参数**
+
+x:  一个HTML控件
+
+jsCode: JS代码字符串
+
+data: 传给JS的数据，转化为JSON数据
+
+> **例如**
+
+```r
+## Not run:
+library(leaflet)
+# This example uses browser geolocation. RStudio users:
+# this won't work in the Viewer pane; try popping it
+# out into your system web browser.
+leaflet() %>% addTiles() %>%
+  onRender("
+  function(el, x) {
+    // Navigate the map to the user's location
+    this.locate({setView: true});
+    }
+    ")
+
+# This example shows how you can make an R data frame available
+# to your JavaScript code.
+
+meh <- "&#x1F610;";
+yikes <- "&#x1F628;";
+df <- data.frame(
+        lng = quakes$long,
+        lat = quakes$lat,
+        html = ifelse(quakes$mag < 5.5, meh, yikes),
+        stringsAsFactors = FALSE
+        )
+
+leaflet() %>% addTiles() %>%
+  fitBounds(min(df$lng), min(df$lat), max(df$lng), max(df$lat)) %>%
+    onRender("
+          function(el, x, data) {
+                for (var i = 0; i < data.lng.length; i++) {
+                    var icon = L.divIcon({className: '', html: data.html[i]});
+                    L.marker([data.lat[i], data.lng[i]], {icon: icon}).addTo(this);
+                    }
+                }
+          ", data = df)
+
+## End(Not run)
+
+```
+
+### onStaticRenderComplete 
+
+静态渲染后执行JavaScript代码
+
+> **描述**
+
+该机制是为运行代码定制控件实例而设计的，这是无法在页面加载时间完成的，因为控件实例还没有被创建。
+
+> **用法**
+
+```r
+onStaticRenderComplete(jsCode)
+```
+
+> **值**
+
+创建了一个htmltools包中的tags$script对象
+
+> **例子**
+
+```r
+## Not run:
+library(leaflet)
+library(htmltools)
+library(htmlwidgets)
+
+page <- tagList(
+    leaflet() %>% addTiles(),
+    onStaticRenderComplete(
+      "HTMLWidgets.find('.leaflet').setZoom(4);"
+        )
+      )
+      
+print(page, browse = TRUE)
+
+## End(Not run)
+```
+
+### prependContent 
+
+将附加HTML内容添加到控件中
+
+> **描述**
+
+使用这些函数将额外的HTML内容（主要是JavaScript和/或CSS样式）附加到
+控件，用于在独立模式下进行渲染（即在R控制台上打印）或在knitr文档中进行渲染。
+当在Shiny的控件渲染函数中运行时，这些函数不受支持，并且将
+在该上下文中使用警告。允许多个调用，并且稍后的调用不会撤销以前调用的影响。
+
+> **用法**
+
+```r
+prependContent(x, ...)
+appendContent(x, ...)
+```
+
+> **参数**
+
+x: HTML标签对象
+
+...: 有效的标签，文本或者HTML.或者是他们的一个列表
+
+> **值**
+
+输出一个调整了的HTML控件
+
+
+### saveWidget 
+
+把控件保存称HTML文件
+
+> **描述**
+
+把控件保存成HTML文件
+
+> **用法**
+
+```r
+saveWidget(widget, file, selfcontained = TRUE, libdir = NULL,
+  background = "white", title = class(widget)[[1]], knitrOptions = list())
+```
+> **参数**
+
+widget: 需要保存的控件
+
+file: 保存的路径
+
+selfcontained: 是否保存成一个自包含的HTML文档
+
+libdir: HTML依赖的包的路径
+
+background: HTML背景色
+
+title: 产生主页的标题
+
+knitrOptions: 一个knitr代码块的选项列表
+
+
+### scaffoldWidget 
+
+为HTML控件创建实现脚手架
+
+> **描述**
+
+将一个HTML控件实现的最小代码添加到一个R包中。这个函数必须从要添加小部件的包的根目录中执行。
+
+> **用法**
+
+```r
+scaffoldWidget(name, bowerPkg = NULL, edit = interactive())
+```
+
+> **参数**
+
+name: 控件的名称
+
+bowerPkg: 这个控件基于Bower包的可选名称。如果您指定这个参数然后Bower将被用来自动下载控件。源代码和依赖项，并将它们添加到小部件的YAML中。
+
+edit: 在创建脚手架后，自动打开控件的JavaScript源文件。
+
+
+### setWidgetIdSeed 
+
+为控件元素ID设置随机种子
+
+> **描述**
+
+设置用于生成控件元素ID的随机种子。调用这个函数而不是依赖
+默认行为确保跨会话的稳定控件ID。
+
+> **用法**
+
+```r
+setWidgetIdSeed(seed, kind = NULL, normal.kind = NULL)
+```
+
+> **参数**
+
+seed: 一个值，整数或者为NULL
+
+kind: character or NULL
+
+normal.kind: character string or NULL.
+
+### sizingPolicy 
+
+创建一个空间大小调整策略
+
+> **描述**
+
+Define the policy by which HTML widgets will be sized in various containers (e.g. Browser, RStudio
+Viewer, R Markdown, Shiny). Note that typically widgets can accept the default sizing policy
+(or override only one or two aspects of it) and get satisfactory sizing behavior via the automatic sizing
+logic built into the htmlwidgets framework (see the notes below for the most typical exceptions
+to this).
+
+> **用法**
+
+```r
+sizingPolicy(defaultWidth = NULL, defaultHeight = NULL, padding = NULL,
+  viewer.defaultWidth = NULL, viewer.defaultHeight = NULL,
+  viewer.padding = NULL, viewer.fill = TRUE, viewer.suppress = FALSE,
+  viewer.paneHeight = NULL, browser.defaultWidth = NULL,
+  browser.defaultHeight = NULL, browser.padding = NULL,
+  browser.fill = FALSE, browser.external = FALSE,
+  knitr.defaultWidth = NULL, knitr.defaultHeight = NULL,
+  knitr.figure = TRUE)
+```
+
+> **参数**
+
+defaultWidth: The default width used to display the widget. This parameter specifies the defaultwidth for viewing in all contexts (browser, viewer, and knitr) unless it is specifically overridden with e.g. browser.defaultWidth.
+
+defaultHeight: The default height used to display the widget. This parameter specifies the default height for viewing in all contexts (browser, viewer, and knitr) unless it is specifically overridden with e.g. browser.defaultHeight
+
+padding: Padding around the widget (in pixels). This parameter specifies the padding for viewing in all contexts (browser and viewer) unless it is specifically overriden by e.g. browser.padding.
+
+viewer.defaultWidth: The default width used to display the widget within the RStudio Viewer
+
+viewer.defaultHeight: The default height used to display the widget within the RStudio Viewer.
+
+viewer.padding: Padding around the widget when displayed in the RStudio Viewer (defaults to 15 pixels).
+
+viewer.fill: When displayed in the RStudio Viewer, automatically size the widget to the viewer dimensions (note that viewer.padding is still applied). Default to TRUE.
+
+viewer.suppress: Never display the widget within the RStudio Viewer (useful for widgets that require a large amount of space for rendering). Defaults to FALSE.
+
+viewer.paneHeight: Request that the RStudio Viewer be forced to a specific height when displaying this widget.
+
+browser.defaultWidth: The default width used to display the widget within a standalone web browser.
+
+browser.defaultHeight: The default height used to display the widget within a standalone web browser.
+
+browser.padding: Padding around the widget when displayed in a standalone browser (defaults to 40 pixels).
+
+browser.fill:  When displayed in a standalone web browser, automatically size the widget tothe browser dimensions (note that browser.padding is still applied). Defaults to FALSE.
+
+browser.external: When displaying in a browser, always use an external browser (via browseURL()). Defaults to FALSE, which will result in the use of an internal browser within RStudio v1.1 and higher.
+
+
+knitr.defaultWidth: The default width used to display the widget within documents generated by knitr (e.g. R Markdown).
+
+knitr.figure: Apply the default knitr fig.width and fig.height to the widget when it’s rendered within R Markdown documents. Defaults to TRUE.
+
+
+> **细节**
+
+The default HTML widget sizing policy treats the widget with the same sizing semantics as an R plot. When printed at the R console the widget is displayed within the RStudio Viewer and sized to fill the Viewer pane (modulo any padding). When rendered inside an R Markdown document the widget is sized based on the default size of figures in the document. 
+
+You might need to change the default behavior if your widget is extremely large. In this case you might specify viewer.suppress = TRUE and knitr.figure = FALSE as well provide for a larger default width and height for knitr. 
+
+You also might need to change the default behavior if you widget already incorporates padding. Inthis case you might specify viewer.padding = 0.
+For additional details on widget sizing:vignette("develop_sizing", package = "htmlwidgets")
+
+相关细节可以参考第二章
+
+> **值**
+
+一个控件大小的调整策略
+

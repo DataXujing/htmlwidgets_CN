@@ -116,15 +116,16 @@
 }
 
 \setlength{\droptitle}{-2em}
+
   \title{htmlwidgets中文教程}
-  \pretitle{\vspace{\droptitle}\centering\huge}
+    \pretitle{\vspace{\droptitle}\centering\huge}
   \posttitle{\par}
-  \author{徐静 译}
-  \preauthor{\centering\large\emph}
+    \author{徐静 译}
+    \preauthor{\centering\large\emph}
   \postauthor{\par}
-  \predate{\centering\large\emph}
+      \predate{\centering\large\emph}
   \postdate{\par}
-  \date{2018-07-05}
+    \date{2018-07-05}
 
 \usepackage{booktabs}
 \usepackage{xeCJK}
@@ -163,7 +164,7 @@
 
 \href{https://CRAN.R-project.org/package=htmlwidgets}{htmlwidgets}是R语言中非常有划时代意义的包，因为有了htmlwidgets使得R语言在交互可视化和基于JavaScript的编程有了实质性的进步。htmlwidgets目前没有中文说明文档和教程，该文档是对官方文档的详细翻译，译者水平有限，读者可以在\url{https://github.com/DataXujing/htmlwidgets_CN/issues}中留言指正。
 
-\begin{center}\includegraphics[height=0.7\textheight]{pic/cover} \end{center}
+\begin{center}\includegraphics[width=9.88in,height=0.7\textheight]{pic/cover} \end{center}
 
 \chapter*{序言}
 \addcontentsline{toc}{chapter}{序言}
@@ -313,7 +314,7 @@ Exchange XML Format)数据文件的交互可视化，例如：
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{pic/ch1_1} \end{center}
+\begin{center}\includegraphics[width=6.89in]{pic/ch1_1} \end{center}
 
 注意上面的输出仅仅是一个静态图像，你可以按照下文的Demo做一个交互的版本。
 
@@ -820,19 +821,275 @@ binding的说明例子：
 
 \chapter{HTML控件：高级主题}\label{htmlwidgets-advanced}
 
-\section{概述}\label{-1}
+\section{本节概述}
+
+本部分将介绍创建控件的几个主要方面，这些控件并不是所有控件都需要的，但他是获得绑定到某些类型的JavaScript库才能正常工作的重要部分。涵盖的主题包括：
+
+\begin{itemize}
+\item
+  将R对象的JSON表示转换为JavaScript库所需的表示（例如，R数据帧到D3数据集）。
+\item
+  在JavaScript绑定中跟踪特定于实例的控件数据。
+\item
+  将JavaScript函数从R传递到JavaScript（例如用户提供的格式化或绘图功能）。
+\item
+  生成自定义HTML以封装控件（默认为\texttt{\textless{}div\ \textgreater{}}但一些库需要不同的元素，例如\texttt{\textless{}SPAN\ \textgreater{}}）
+\end{itemize}
 
 \section{数据变换}
 
+R对象传递一个参数x给createWidget()函数，并使用内部函数htmlwidgets:::toJSON()转换成JSON字符串，默认情况下，它基本上是jsonlite::toJSON()的包装函数。但是，有时这种表示并不是您所连接的JavaScript库所要求的。有两个JavaScript函数可以用来转换JSON数据。
+
 \subsection{HTMLWidgets.dataframeToD3()}\label{htmlwidgets.dataframetod3}
+
+R数据框是'long form'(长型数据:数组名加一个向量)然而d3需要一个'wide
+form'(宽型数据:每一行都有以键值对形式表示)，在R中使用dataframeToD3()函数就可以把数据变化成JavaScript对用格式的数据
+
+用一个例子来说明R的long-form数据
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\OperatorTok{\{}
+  \StringTok{"Sepal.Length"}\OperatorTok{:}\NormalTok{ [}\FloatTok{5.1}\OperatorTok{,} \FloatTok{4.9}\OperatorTok{,} \FloatTok{4.7}\NormalTok{]}\OperatorTok{,}
+  \StringTok{"Sepal.Width"}\OperatorTok{:}\NormalTok{ [}\FloatTok{3.5}\OperatorTok{,} \DecValTok{3}\OperatorTok{,} \FloatTok{3.2}\NormalTok{]}\OperatorTok{,}
+  \StringTok{"Petal.Length"}\OperatorTok{:}\NormalTok{ [}\FloatTok{1.4}\OperatorTok{,} \FloatTok{1.4}\OperatorTok{,} \FloatTok{1.3}\NormalTok{]}\OperatorTok{,}
+  \StringTok{"Petal.Width"}\OperatorTok{:}\NormalTok{ [}\FloatTok{0.2}\OperatorTok{,} \FloatTok{0.2}\OperatorTok{,} \FloatTok{0.2}\NormalTok{]}\OperatorTok{,}
+  \StringTok{"Species"}\OperatorTok{:}\NormalTok{ [}\StringTok{"setosa"}\OperatorTok{,} \StringTok{"setosa"}\OperatorTok{,} \StringTok{"setosa"}\NormalTok{]}
+\OperatorTok{\}} 
+\end{Highlighting}
+\end{Shaded}
+
+使用HTMLWidgets.dataframeToD3()，将会变成：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{[}
+  \OperatorTok{\{}
+    \StringTok{"Sepal.Length"}\OperatorTok{:} \FloatTok{5.1}\OperatorTok{,}
+    \StringTok{"Sepal.Width"}\OperatorTok{:} \FloatTok{3.5}\OperatorTok{,}
+    \StringTok{"Petal.Length"}\OperatorTok{:} \FloatTok{1.4}\OperatorTok{,}
+    \StringTok{"Petal.Width"}\OperatorTok{:} \FloatTok{0.2}\OperatorTok{,}
+    \StringTok{"Species"}\OperatorTok{:} \StringTok{"setosa"}
+  \OperatorTok{\},}
+  \OperatorTok{\{}
+    \StringTok{"Sepal.Length"}\OperatorTok{:} \FloatTok{4.9}\OperatorTok{,}
+    \StringTok{"Sepal.Width"}\OperatorTok{:} \DecValTok{3}\OperatorTok{,}
+    \StringTok{"Petal.Length"}\OperatorTok{:} \FloatTok{1.4}\OperatorTok{,}
+    \StringTok{"Petal.Width"}\OperatorTok{:} \FloatTok{0.2}\OperatorTok{,}
+    \StringTok{"Species"}\OperatorTok{:} \StringTok{"setosa"}
+  \OperatorTok{\},}
+  \OperatorTok{\{}
+    \StringTok{"Sepal.Length"}\OperatorTok{:} \FloatTok{4.7}\OperatorTok{,}
+    \StringTok{"Sepal.Width"}\OperatorTok{:} \FloatTok{3.2}\OperatorTok{,}
+    \StringTok{"Petal.Length"}\OperatorTok{:} \FloatTok{1.3}\OperatorTok{,}
+    \StringTok{"Petal.Width"}\OperatorTok{:} \FloatTok{0.2}\OperatorTok{,}
+    \StringTok{"Species"}\OperatorTok{:} \StringTok{"setosa"}
+  \OperatorTok{\}}
+\NormalTok{] }
+\end{Highlighting}
+\end{Shaded}
+
+作为一个实际例子，simpleNetwork接受包含R侧的网络链接的数据框，然后将其转换为JavaScript
+renderValue函数内的D3表示：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{renderValue}\OperatorTok{:} \KeywordTok{function}\NormalTok{(x) }\OperatorTok{\{}
+
+  \CommentTok{// convert links data frame to d3 friendly format}
+  \KeywordTok{var}\NormalTok{ links }\OperatorTok{=} \VariableTok{HTMLWidgets}\NormalTok{.}\AttributeTok{dataframeToD3}\NormalTok{(}\VariableTok{x}\NormalTok{.}\AttributeTok{links}\NormalTok{)}\OperatorTok{;}
+  
+  \CommentTok{// ... use the links, etc ...}
+
+\OperatorTok{\}}
+\end{Highlighting}
+\end{Shaded}
 
 \subsection{HTMLWidgets.transposeArray2D()}\label{htmlwidgets.transposearray2d}
 
+有时二维数组需要类似的换位。为此，提供了transposeArray2D()函数。下面是一个示例数组：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{[}
+\NormalTok{  [}\FloatTok{5.1}\OperatorTok{,} \FloatTok{4.9}\OperatorTok{,} \FloatTok{4.7}\OperatorTok{,} \FloatTok{4.6}\OperatorTok{,} \DecValTok{5}\OperatorTok{,} \FloatTok{5.4}\OperatorTok{,} \FloatTok{4.6}\OperatorTok{,} \DecValTok{5}\NormalTok{]}\OperatorTok{,}
+\NormalTok{  [}\FloatTok{3.5}\OperatorTok{,} \DecValTok{3}\OperatorTok{,} \FloatTok{3.2}\OperatorTok{,} \FloatTok{3.1}\OperatorTok{,} \FloatTok{3.6}\OperatorTok{,} \FloatTok{3.9}\OperatorTok{,} \FloatTok{3.4}\OperatorTok{,} \FloatTok{3.4}\NormalTok{]}\OperatorTok{,}
+\NormalTok{  [}\FloatTok{1.4}\OperatorTok{,} \FloatTok{1.4}\OperatorTok{,} \FloatTok{1.3}\OperatorTok{,} \FloatTok{1.5}\OperatorTok{,} \FloatTok{1.4}\OperatorTok{,} \FloatTok{1.7}\OperatorTok{,} \FloatTok{1.4}\OperatorTok{,} \FloatTok{1.5}\NormalTok{]}\OperatorTok{,}
+\NormalTok{  [}\FloatTok{0.2}\OperatorTok{,} \FloatTok{0.2}\OperatorTok{,} \FloatTok{0.2}\OperatorTok{,} \FloatTok{0.2}\OperatorTok{,} \FloatTok{0.2}\OperatorTok{,} \FloatTok{0.4}\OperatorTok{,} \FloatTok{0.3}\OperatorTok{,} \FloatTok{0.2}\NormalTok{]}\OperatorTok{,}
+\NormalTok{  [}\StringTok{"setosa"}\OperatorTok{,} \StringTok{"setosa"}\OperatorTok{,} \StringTok{"setosa"}\OperatorTok{,} \StringTok{"setosa"}\OperatorTok{,} \StringTok{"setosa"}\OperatorTok{,} \StringTok{"setosa"}\OperatorTok{,} \StringTok{"setosa"}\OperatorTok{,} \StringTok{"setosa"}\NormalTok{]}
+\NormalTok{] }
+\end{Highlighting}
+\end{Shaded}
+
+HTMLWidgets.transposeArray2D()把其变换成：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{[}
+\NormalTok{  [}\FloatTok{5.1}\OperatorTok{,} \FloatTok{3.5}\OperatorTok{,} \FloatTok{1.4}\OperatorTok{,} \FloatTok{0.2}\OperatorTok{,} \StringTok{"setosa"}\NormalTok{]}\OperatorTok{,}
+\NormalTok{  [}\FloatTok{4.9}\OperatorTok{,} \DecValTok{3}\OperatorTok{,} \FloatTok{1.4}\OperatorTok{,} \FloatTok{0.2}\OperatorTok{,} \StringTok{"setosa"}\NormalTok{]}\OperatorTok{,}
+\NormalTok{  [}\FloatTok{4.7}\OperatorTok{,} \FloatTok{3.2}\OperatorTok{,} \FloatTok{1.3}\OperatorTok{,} \FloatTok{0.2}\OperatorTok{,} \StringTok{"setosa"}\NormalTok{]}\OperatorTok{,}
+\NormalTok{  [}\FloatTok{4.6}\OperatorTok{,} \FloatTok{3.1}\OperatorTok{,} \FloatTok{1.5}\OperatorTok{,} \FloatTok{0.2}\OperatorTok{,} \StringTok{"setosa"}\NormalTok{]}\OperatorTok{,}
+\NormalTok{  [}\DecValTok{5}\OperatorTok{,} \FloatTok{3.6}\OperatorTok{,} \FloatTok{1.4}\OperatorTok{,} \FloatTok{0.2}\OperatorTok{,} \StringTok{"setosa"}\NormalTok{]}\OperatorTok{,}
+\NormalTok{  [}\FloatTok{5.4}\OperatorTok{,} \FloatTok{3.9}\OperatorTok{,} \FloatTok{1.7}\OperatorTok{,} \FloatTok{0.4}\OperatorTok{,} \StringTok{"setosa"}\NormalTok{]}\OperatorTok{,}
+\NormalTok{  [}\FloatTok{4.6}\OperatorTok{,} \FloatTok{3.4}\OperatorTok{,} \FloatTok{1.4}\OperatorTok{,} \FloatTok{0.3}\OperatorTok{,} \StringTok{"setosa"}\NormalTok{]}\OperatorTok{,}
+\NormalTok{  [}\DecValTok{5}\OperatorTok{,} \FloatTok{3.4}\OperatorTok{,} \FloatTok{1.5}\OperatorTok{,} \FloatTok{0.2}\OperatorTok{,} \StringTok{"setosa"}\NormalTok{]}
+\NormalTok{] }
+\end{Highlighting}
+\end{Shaded}
+
+dygraphs控件就使用了这种变换：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{renderValue}\OperatorTok{:} \KeywordTok{function}\NormalTok{(x) }\OperatorTok{\{}
+   
+    \CommentTok{// ... code excluded ...}
+    
+    \CommentTok{// transpose array}
+    \VariableTok{x}\NormalTok{.}\VariableTok{attrs}\NormalTok{.}\AttributeTok{file} \OperatorTok{=} \VariableTok{HTMLWidgets}\NormalTok{.}\AttributeTok{transposeArray2D}\NormalTok{(}\VariableTok{x}\NormalTok{.}\VariableTok{attrs}\NormalTok{.}\AttributeTok{file}\NormalTok{)}\OperatorTok{;}
+    
+    \CommentTok{// ... more code excluded ...}
+\OperatorTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
 \subsection{自定义JSON串行化器}\label{json}
+
+当htmlwidgets中的默认JSON序列化器无法按您预期的方式工作时，您可能会发现需要自定义控件数据的JSON序列化。对于实现控件的包的作者，JSON序列化有两个定制级别：您可以自定义jsonlite::toJSON()的参数的默认值，或者只需定制整个函数。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  jsonlite::toJSON()有很多参数，并且我们已经改变了它的很多默认值。下面是我们在htmlwidgets中使用的JSON序列化器：
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{function}\NormalTok{ (x, ..., }\DataTypeTok{dataframe =} \StringTok{"columns"}\NormalTok{, }\DataTypeTok{null =} \StringTok{"null"}\NormalTok{, }\DataTypeTok{na =} \StringTok{"null"}\NormalTok{, }
+    \DataTypeTok{auto_unbox =} \OtherTok{TRUE}\NormalTok{, }\DataTypeTok{digits =} \KeywordTok{getOption}\NormalTok{(}\StringTok{"shiny.json.digits"}\NormalTok{, }
+        \DecValTok{16}\NormalTok{), }\DataTypeTok{use_signif =} \OtherTok{TRUE}\NormalTok{, }\DataTypeTok{force =} \OtherTok{TRUE}\NormalTok{, }\DataTypeTok{POSIXt =} \StringTok{"ISO8601"}\NormalTok{, }
+    \DataTypeTok{UTC =} \OtherTok{TRUE}\NormalTok{, }\DataTypeTok{rownames =} \OtherTok{FALSE}\NormalTok{, }\DataTypeTok{keep_vec_names =} \OtherTok{TRUE}\NormalTok{, }\DataTypeTok{strict_atomic =} \OtherTok{TRUE}\NormalTok{) }
+\NormalTok{\{}
+    \ControlFlowTok{if}\NormalTok{ (strict_atomic) }
+\NormalTok{        x <-}\StringTok{ }\KeywordTok{I}\NormalTok{(x)}
+\NormalTok{    jsonlite}\OperatorTok{::}\KeywordTok{toJSON}\NormalTok{(x, }\DataTypeTok{dataframe =}\NormalTok{ dataframe, }\DataTypeTok{null =}\NormalTok{ null, }\DataTypeTok{na =}\NormalTok{ na, }
+        \DataTypeTok{auto_unbox =}\NormalTok{ auto_unbox, }\DataTypeTok{digits =}\NormalTok{ digits, }\DataTypeTok{use_signif =}\NormalTok{ use_signif, }
+        \DataTypeTok{force =}\NormalTok{ force, }\DataTypeTok{POSIXt =}\NormalTok{ POSIXt, }\DataTypeTok{UTC =}\NormalTok{ UTC, }\DataTypeTok{rownames =}\NormalTok{ rownames, }
+        \DataTypeTok{keep_vec_names =}\NormalTok{ keep_vec_names, }\DataTypeTok{json_verbatim =} \OtherTok{TRUE}\NormalTok{, }
+\NormalTok{        ...)}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+例如，我们通过列而非行将数据框转化为JSON(后者是jsonlite::toJSON的默认设置)，如果要更改任何参数的默认值，可以将属性TOJSON
+ARGS附加到将被传递给createWidgets()的widgets数据。例如：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{fooWidget <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(data, name, ...) \{}
+  \CommentTok{# ... process the data ...}
+\NormalTok{  params <-}\StringTok{ }\KeywordTok{list}\NormalTok{(}\DataTypeTok{foo =}\NormalTok{ data, }\DataTypeTok{bar =} \OtherTok{TRUE}\NormalTok{)}
+  \CommentTok{# customize toJSON() argument values}
+  \KeywordTok{attr}\NormalTok{(params, }\StringTok{'TOJSON_ARGS'}\NormalTok{) <-}\StringTok{ }\KeywordTok{list}\NormalTok{(}\DataTypeTok{digits =} \DecValTok{7}\NormalTok{, }\DataTypeTok{na =} \StringTok{'string'}\NormalTok{)}
+\NormalTok{  htmlwidgets}\OperatorTok{::}\KeywordTok{createWidget}\NormalTok{(name, }\DataTypeTok{x =}\NormalTok{ params, ...)}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+在上面的例子中，我们将数字的默认值从16改为7，NA从NULL改为String.您是否需要向用户公开这样的定制，这取决于包的作者。例如，您可以在控件中附加一个参数，这样用户就可以自定义JSON序列化程序的行为：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{fooWidget <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(data, name, ..., }\DataTypeTok{JSONArgs =} \KeywordTok{list}\NormalTok{(}\DataTypeTok{digits =} \DecValTok{7}\NormalTok{)) \{}
+  \CommentTok{# ... process the data ...}
+\NormalTok{  params <-}\StringTok{ }\KeywordTok{list}\NormalTok{(}\DataTypeTok{foo =}\NormalTok{ data, }\DataTypeTok{bar =} \OtherTok{TRUE}\NormalTok{)}
+  \CommentTok{# customize toJSON() argument values}
+  \KeywordTok{attr}\NormalTok{(params, }\StringTok{'TOJSON_ARGS'}\NormalTok{) <-}\StringTok{ }\NormalTok{JSONArgs}
+\NormalTok{  htmlwidgets}\OperatorTok{::}\KeywordTok{createWidget}\NormalTok{(name, }\DataTypeTok{x =}\NormalTok{ params, ...)}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+还可以使用全局选项htmlwidgets.TOJSON\_ARGS为当前会话中的所有控件自定义JSON序列化参数，例如：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{options}\NormalTok{(}\DataTypeTok{htmlwidgets.TOJSON_ARGS =} \KeywordTok{list}\NormalTok{(}\DataTypeTok{digits =} \DecValTok{7}\NormalTok{, }\DataTypeTok{pretty =} \OtherTok{TRUE}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  如果不想使用jsonlite,可以通过将属性TOJSON\_FUNC附加到widget数据，完全重写序列化函数，例如：
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{fooWidget <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(data, name, ...) \{}
+  \CommentTok{# ... process the data ...}
+\NormalTok{  params <-}\StringTok{ }\KeywordTok{list}\NormalTok{(}\DataTypeTok{foo =}\NormalTok{ data, }\DataTypeTok{bar =} \OtherTok{TRUE}\NormalTok{)}
+  \CommentTok{# customize the JSON serializer}
+  \KeywordTok{attr}\NormalTok{(params, }\StringTok{'TOJSON_FUNC'}\NormalTok{) <-}\StringTok{ }\NormalTok{MY_OWN_JSON_FUNCTION}
+\NormalTok{  htmlwidgets}\OperatorTok{::}\KeywordTok{createWidget}\NormalTok{(name, }\DataTypeTok{x =}\NormalTok{ params, ...)}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+这里MY\_OWN\_JSON\_FUNCTION函数可以是一个将R对象转换为JSON的任意R函数。如果您还指定了TOJSON\_ARGS属性，它也将传递给您的自定义JSON函数。注意这些自定义JSON序列化程序的特性要求在Shiny的应用程序中呈现控件时，Shiny的版本大于0.111。
 
 \section{传递JavaScript函数}\label{javascript}
 
+正如您所期望的，从R传递到JavaScript的字符向量被转换成JavaScript字符串。但是，如果您希望允许用户提供自定义的JavaScript函数用于格式化、绘图或事件处理，该怎么办？对于这种情况，htmlwidgets包包含一个JS()函数，它允许您在客户端接收到一个字符值时将其作为JavaScript进行评估。
+
+例如，dygraphs控件包括允许用户为各种上下文提供回调函数的dyCallbacks函数。这些回调被标记为包含JavaScript，以便它们可以在客户端上转换成实际的JavaScript函数：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{callbacks <-}\StringTok{ }\KeywordTok{list}\NormalTok{(}
+  \DataTypeTok{clickCallback =} \KeywordTok{JS}\NormalTok{(clickCallback)}
+  \DataTypeTok{drawCallback =} \KeywordTok{JS}\NormalTok{(drawCallback)}
+  \DataTypeTok{highlightCallback =} \KeywordTok{JS}\NormalTok{(highlightCallback)}
+  \DataTypeTok{pointClickCallback =} \KeywordTok{JS}\NormalTok{(pointClickCallback)}
+  \DataTypeTok{underlayCallback =} \KeywordTok{JS}\NormalTok{(underlayCallback)}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+另一个例子是DT包控件，用户可以在加载和初始化表之后制定一个带有JavaScript的intCallback来执行。
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{datatable}\NormalTok{(}\KeywordTok{head}\NormalTok{(iris, }\DecValTok{20}\NormalTok{), }\DataTypeTok{options =} \KeywordTok{list}\NormalTok{(}
+  \DataTypeTok{initComplete =} \KeywordTok{JS}\NormalTok{(}
+    \StringTok{"function(settings, json) \{"}\NormalTok{,}
+    \StringTok{"$(this.api().table().header()).css(\{'background-color': '#000', 'color': '#fff'\});"}\NormalTok{,}
+    \StringTok{"\}"}\NormalTok{)}
+\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+如果将多个参数传递给JS(),（例如上面的示例中），它们将被级联成由\texttt{\textbackslash{}n}分隔的单个字符串。
+
 \section{自定义控件HTML}\label{html}
+
+通常，控件的HTML``外壳''只是一个\texttt{\textless{}div\textgreater{}}元素，而这是对应于新的控件的默认行为，而这些控件不是以其他方式指定的。然而有时你需要不同的标签类型，例如sparkline控件中需要\texttt{\textless{}span\textgreater{}}，因此实现以下自定义HTML生成函数：
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{sparkline_html <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(id, style, class, ...)\{}
+\NormalTok{  tags}\OperatorTok{$}\KeywordTok{span}\NormalTok{(}\DataTypeTok{id =}\NormalTok{ id, }\DataTypeTok{class =}\NormalTok{ class)}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+请注意，这个函数是在由widgetname\_html实现的小程序包中查找的，因此它不必从包中正式导出或以其他方式注册到htmlwidgets。
+
+大多数的控件都不需要自定义HTML函数，但是如果需要为你的控件生成自定义的HTML（例如你需要一个\texttt{\textless{}input\textgreater{}}或\texttt{\textless{}span\textgreater{}}而不是一个\texttt{\textless{}div\textgreater{}}),那么你应该是用htmltools包。
 
 \chapter{htmlwidgets包中函数的总结}\label{htmlwidgets-pkgintro}
 
@@ -840,32 +1097,642 @@ binding的说明例子：
 
 \section{htmlwidgets包函数}\label{htmlwidgets}
 
-\begin{itemize}
+\subsection{htmlwidgets-package}\label{htmlwidgets-package}
+
+使用R创建HTML控件的包的信息
+
+\begin{quote}
+\textbf{描述}
+\end{quote}
+
+htmlwidgets包提供了一个简单的创建R链接JavaScript包的框架，使用该框架创建控件可以：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
 \item
-  htmlwidgets-package
+  在R控制台上使用JavaScript可视化库，就像绘图一样
 \item
-  createWidget
+  在R Markdown文档和Shiny Web应用程序中嵌入控件
 \item
-  getDependency
-\item
-  htmlwidgets-shiny
-\item
-  JS
-\item
-  onRender
-\item
-  onStaticRenderComplete .
-\item
-  prependContent
-\item
-  saveWidget
-\item
-  scaffoldWidget
-\item
-  setWidgetIdSeed
-\item
-  sizingPolicy
-\end{itemize}
+  对保存网页，共享分析成果
+\end{enumerate}
+
+在R中可以参考下面文档(这些说明文档译者已经在前三章翻译)
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{vignette}\NormalTok{(}\StringTok{"develop_intro"}\NormalTok{, }\DataTypeTok{package =} \StringTok{"htmlwidgets"}\NormalTok{) }\CommentTok{#第一章}
+\KeywordTok{vignette}\NormalTok{(}\StringTok{"develop_sizing"}\NormalTok{, }\DataTypeTok{package =} \StringTok{"htmlwidgets"}\NormalTok{) }\CommentTok{#第二章}
+\KeywordTok{vignette}\NormalTok{(}\StringTok{"develop_advanced"}\NormalTok{, }\DataTypeTok{package =} \StringTok{"htmlwidgets"}\NormalTok{) }\CommentTok{#第三章}
+\end{Highlighting}
+\end{Shaded}
+
+包的源码地址：\url{https://github.com/ramnathv/htmlwidgets}
+
+\begin{quote}
+\textbf{作者}
+\end{quote}
+
+Ramnath Vaidyanathan, Joe Cheng, JJ Allaire, and Yihui Xie
+
+\subsection{createWidget}\label{createwidget}
+
+创建HTML控件函数
+
+\begin{quote}
+\textbf{描述}
+\end{quote}
+
+基于控件的YAML文件和给定的JavaScript库创建一个HTML控件。
+
+\begin{quote}
+\textbf{用法}
+\end{quote}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{createWidget}\NormalTok{(name, x, }\DataTypeTok{width =} \OtherTok{NULL}\NormalTok{, }\DataTypeTok{height =} \OtherTok{NULL}\NormalTok{,}
+  \DataTypeTok{sizingPolicy =}\NormalTok{ htmlwidgets}\OperatorTok{::}\KeywordTok{sizingPolicy}\NormalTok{(), }\DataTypeTok{package =}\NormalTok{ name,}
+  \DataTypeTok{dependencies =} \OtherTok{NULL}\NormalTok{, }\DataTypeTok{elementId =} \OtherTok{NULL}\NormalTok{, }\DataTypeTok{preRenderHook =} \OtherTok{NULL}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{quote}
+\textbf{参数}
+\end{quote}
+
+name: 控件名称(要和YAML和JS文档中的名称保持一致)
+
+x: 传入控件的数据，要转化为JSON格式的数据。
+
+width: 控件的宽度，默认值是NULL,默认会自适应调整宽度
+
+height: 控件的高度，默认值是NULL,默认会自适应调整高度
+
+sizingPoicy: 调整控件大小的策略，详见第二章
+
+package: 定义控件所在的包（默认就是控件的名称）
+
+dependencies:
+控件额外的依赖(YAML文件定义之外)，特别是对于一些动态的依赖选项是有必要的
+
+elementID: 使用控件的显示元素ID(而不是自动生成的元素ID)
+,如果您有JavaScript与特定的实例控件交互这是很有必要的
+
+preRenderHook: 一个运行在控件上的函数。
+
+\begin{quote}
+\textbf{细节}
+\end{quote}
+
+更多细节可以参考第一章
+
+\begin{quote}
+\textbf{值}
+\end{quote}
+
+htmlwidgets对象,这将在不同的上下文中智能地将自己打印到HTML中。
+包括R控制台，在R Markdown文档中，以及在Shiny的输出绑定中。
+
+\subsection{getDependency}\label{getdependency}
+
+获取htmlwidgets的JS和CSS依赖关系
+
+\begin{quote}
+\textbf{描述}
+\end{quote}
+
+获取htmlwidgets的JS和CSS依赖关系
+
+\begin{quote}
+\textbf{用法}
+\end{quote}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{getDependency}\NormalTok{(name, }\DataTypeTok{package =}\NormalTok{ name)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{quote}
+\textbf{参数}
+\end{quote}
+
+name: 控件的名称
+
+package: 包的名称，默认是控件的名称
+
+\subsection{htmlwidgets-shiny}\label{htmlwidgets-shiny}
+
+Shiny连接HTML控件
+
+\begin{quote}
+\textbf{描述}
+\end{quote}
+
+创建在Shiny中使用的output和render函数
+
+\begin{quote}
+\textbf{用法}
+\end{quote}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{shinyWidgetOutput}\NormalTok{(outputId, name, width, height, }\DataTypeTok{package =}\NormalTok{ name,}
+  \DataTypeTok{inline =} \OtherTok{FALSE}\NormalTok{, }\DataTypeTok{reportSize =} \OtherTok{FALSE}\NormalTok{)}
+  
+\KeywordTok{shinyRenderWidget}\NormalTok{(expr, outputFunction, env, quoted)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{quote}
+\textbf{参数}
+\end{quote}
+
+outputId: 输出对应的ID
+
+name: 控件创建的名称
+
+width,height: 必须是有效的CSS单元(像：``100\%'',``400px'',``auto'')
+或者是数字
+
+package: 包含控件的包
+
+inline: 对输出使用一个行内的标签(\texttt{\textless{}spqn\textgreater{}})
+
+reportSize: 应该在Shiny的会话客户端数据中报告控件的容器大小吗？
+
+expr: 一个产生HTML控件的而表达式
+
+outputFunction: Shiny输出函数，与render函数对应
+
+env: 在什么环境变量下计算expr
+
+quoted: expr是引用的表达式（用quote()）吗？这是有用的，如果你想保存
+变量中的表达式。
+
+\begin{quote}
+\textbf{细节}
+\end{quote}
+
+这些功能放在控件内部，为Shiny创建控件和渲染控件所用，详细的可见下面的例子。
+
+\begin{quote}
+\textbf{值}
+\end{quote}
+
+创建Shiny可用的output和render函数对
+
+\begin{quote}
+\textbf{例子}
+\end{quote}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# shiny output binding for a widget named 'foo'}
+\NormalTok{fooOutput <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(outputId, }\DataTypeTok{width =} \StringTok{"100%"}\NormalTok{, }\DataTypeTok{height =} \StringTok{"400px"}\NormalTok{) \{}
+\NormalTok{    htmlwidgets}\OperatorTok{::}\KeywordTok{shinyWidgetOutput}\NormalTok{(outputId, }\StringTok{"foo"}\NormalTok{, width, height)}
+\NormalTok{  \}}
+  
+\CommentTok{# shiny render function for a widget named 'foo'}
+\NormalTok{renderFoo <-}\StringTok{ }\ControlFlowTok{function}\NormalTok{(expr, }\DataTypeTok{env =} \KeywordTok{parent.frame}\NormalTok{(), }\DataTypeTok{quoted =} \OtherTok{FALSE}\NormalTok{) \{}
+    \ControlFlowTok{if}\NormalTok{ (}\OperatorTok{!}\NormalTok{quoted) \{ expr <-}\StringTok{ }\KeywordTok{substitute}\NormalTok{(expr) \} }\CommentTok{# force quoted}
+\NormalTok{    htmlwidgets}\OperatorTok{::}\KeywordTok{shinyRenderWidget}\NormalTok{(expr, fooOutput, env, }\DataTypeTok{quoted =} \OtherTok{TRUE}\NormalTok{)}
+\NormalTok{  \}}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{JS}\label{js}
+
+把R中的字符串转化成合法的JavaScript脚本
+
+\begin{quote}
+\textbf{描述}
+\end{quote}
+
+JS()函数把接受到的字符向量转化成客户端的JavaScript脚本
+
+\begin{quote}
+\textbf{用法}
+\end{quote}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{JS}\NormalTok{(...)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{quote}
+\textbf{参数}
+\end{quote}
+
+\ldots{}: 一个字符串，字符串的内容就是JavaScript脚本
+
+\begin{quote}
+\textbf{作者}
+\end{quote}
+
+Yihui Xie
+
+\begin{quote}
+\textbf{例子}
+\end{quote}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(htmlwidgets)}
+\KeywordTok{JS}\NormalTok{(}\StringTok{'1 + 1'}\NormalTok{)}
+\KeywordTok{list}\NormalTok{(}\DataTypeTok{x =} \KeywordTok{JS}\NormalTok{(}\StringTok{'function(foo) \{return foo;\}'}\NormalTok{), }\DataTypeTok{y =} \DecValTok{1}\OperatorTok{:}\DecValTok{10}\NormalTok{)}
+\KeywordTok{JS}\NormalTok{(}\StringTok{'function(x) \{'}\NormalTok{, }\StringTok{'return x + 1;'}\NormalTok{, }\StringTok{'\}'}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{onRender}\label{onrender}
+
+渲染后执行自定义的JavaScript代码
+
+\begin{quote}
+\textbf{描述}
+\end{quote}
+
+使用这个函数来补充控件内置的JavaScript渲染逻辑
+自定义JavaScript代码，只针对这个特定的控件对象。
+
+\begin{quote}
+\textbf{用法}
+\end{quote}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{onRender}\NormalTok{(x, jsCode, }\DataTypeTok{data =} \OtherTok{NULL}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{quote}
+\textbf{参数}
+\end{quote}
+
+x: 一个HTML控件
+
+jsCode: JS代码字符串
+
+data: 传给JS的数据，转化为JSON数据
+
+\begin{quote}
+\textbf{例如}
+\end{quote}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{## Not run:}
+\KeywordTok{library}\NormalTok{(leaflet)}
+\CommentTok{# This example uses browser geolocation. RStudio users:}
+\CommentTok{# this won't work in the Viewer pane; try popping it}
+\CommentTok{# out into your system web browser.}
+\KeywordTok{leaflet}\NormalTok{() }\OperatorTok{%>%}\StringTok{ }\KeywordTok{addTiles}\NormalTok{() }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{onRender}\NormalTok{(}\StringTok{"}
+\StringTok{  function(el, x) \{}
+\StringTok{    // Navigate the map to the user's location}
+\StringTok{    this.locate(\{setView: true\});}
+\StringTok{    \}}
+\StringTok{    "}\NormalTok{)}
+
+\CommentTok{# This example shows how you can make an R data frame available}
+\CommentTok{# to your JavaScript code.}
+
+\NormalTok{meh <-}\StringTok{ "&#x1F610;"}\NormalTok{;}
+\NormalTok{yikes <-}\StringTok{ "&#x1F628;"}\NormalTok{;}
+\NormalTok{df <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}
+        \DataTypeTok{lng =}\NormalTok{ quakes}\OperatorTok{$}\NormalTok{long,}
+        \DataTypeTok{lat =}\NormalTok{ quakes}\OperatorTok{$}\NormalTok{lat,}
+        \DataTypeTok{html =} \KeywordTok{ifelse}\NormalTok{(quakes}\OperatorTok{$}\NormalTok{mag }\OperatorTok{<}\StringTok{ }\FloatTok{5.5}\NormalTok{, meh, yikes),}
+        \DataTypeTok{stringsAsFactors =} \OtherTok{FALSE}
+\NormalTok{        )}
+
+\KeywordTok{leaflet}\NormalTok{() }\OperatorTok{%>%}\StringTok{ }\KeywordTok{addTiles}\NormalTok{() }\OperatorTok{%>%}
+\StringTok{  }\KeywordTok{fitBounds}\NormalTok{(}\KeywordTok{min}\NormalTok{(df}\OperatorTok{$}\NormalTok{lng), }\KeywordTok{min}\NormalTok{(df}\OperatorTok{$}\NormalTok{lat), }\KeywordTok{max}\NormalTok{(df}\OperatorTok{$}\NormalTok{lng), }\KeywordTok{max}\NormalTok{(df}\OperatorTok{$}\NormalTok{lat)) }\OperatorTok{%>%}
+\StringTok{    }\KeywordTok{onRender}\NormalTok{(}\StringTok{"}
+\StringTok{          function(el, x, data) \{}
+\StringTok{                for (var i = 0; i < data.lng.length; i++) \{}
+\StringTok{                    var icon = L.divIcon(\{className: '', html: data.html[i]\});}
+\StringTok{                    L.marker([data.lat[i], data.lng[i]], \{icon: icon\}).addTo(this);}
+\StringTok{                    \}}
+\StringTok{                \}}
+\StringTok{          "}\NormalTok{, }\DataTypeTok{data =}\NormalTok{ df)}
+
+\NormalTok{## End(Not run)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{onStaticRenderComplete}\label{onstaticrendercomplete}
+
+静态渲染后执行JavaScript代码
+
+\begin{quote}
+\textbf{描述}
+\end{quote}
+
+该机制是为运行代码定制控件实例而设计的，这是无法在页面加载时间完成的，因为控件实例还没有被创建。
+
+\begin{quote}
+\textbf{用法}
+\end{quote}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{onStaticRenderComplete}\NormalTok{(jsCode)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{quote}
+\textbf{值}
+\end{quote}
+
+创建了一个htmltools包中的tags\$script对象
+
+\begin{quote}
+\textbf{例子}
+\end{quote}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{## Not run:}
+\KeywordTok{library}\NormalTok{(leaflet)}
+\KeywordTok{library}\NormalTok{(htmltools)}
+\KeywordTok{library}\NormalTok{(htmlwidgets)}
+
+\NormalTok{page <-}\StringTok{ }\KeywordTok{tagList}\NormalTok{(}
+    \KeywordTok{leaflet}\NormalTok{() }\OperatorTok{%>%}\StringTok{ }\KeywordTok{addTiles}\NormalTok{(),}
+    \KeywordTok{onStaticRenderComplete}\NormalTok{(}
+      \StringTok{"HTMLWidgets.find('.leaflet').setZoom(4);"}
+\NormalTok{        )}
+\NormalTok{      )}
+      
+\KeywordTok{print}\NormalTok{(page, }\DataTypeTok{browse =} \OtherTok{TRUE}\NormalTok{)}
+
+\NormalTok{## End(Not run)}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{prependContent}\label{prependcontent}
+
+将附加HTML内容添加到控件中
+
+\begin{quote}
+\textbf{描述}
+\end{quote}
+
+使用这些函数将额外的HTML内容（主要是JavaScript和/或CSS样式）附加到
+控件，用于在独立模式下进行渲染（即在R控制台上打印）或在knitr文档中进行渲染。
+当在Shiny的控件渲染函数中运行时，这些函数不受支持，并且将
+在该上下文中使用警告。允许多个调用，并且稍后的调用不会撤销以前调用的影响。
+
+\begin{quote}
+\textbf{用法}
+\end{quote}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{prependContent}\NormalTok{(x, ...)}
+\KeywordTok{appendContent}\NormalTok{(x, ...)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{quote}
+\textbf{参数}
+\end{quote}
+
+x: HTML标签对象
+
+\ldots{}: 有效的标签，文本或者HTML.或者是他们的一个列表
+
+\begin{quote}
+\textbf{值}
+\end{quote}
+
+输出一个调整了的HTML控件
+
+\subsection{saveWidget}\label{savewidget}
+
+把控件保存称HTML文件
+
+\begin{quote}
+\textbf{描述}
+\end{quote}
+
+把控件保存成HTML文件
+
+\begin{quote}
+\textbf{用法}
+\end{quote}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{saveWidget}\NormalTok{(widget, file, }\DataTypeTok{selfcontained =} \OtherTok{TRUE}\NormalTok{, }\DataTypeTok{libdir =} \OtherTok{NULL}\NormalTok{,}
+  \DataTypeTok{background =} \StringTok{"white"}\NormalTok{, }\DataTypeTok{title =} \KeywordTok{class}\NormalTok{(widget)[[}\DecValTok{1}\NormalTok{]], }\DataTypeTok{knitrOptions =} \KeywordTok{list}\NormalTok{())}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{quote}
+\textbf{参数}
+\end{quote}
+
+widget: 需要保存的控件
+
+file: 保存的路径
+
+selfcontained: 是否保存成一个自包含的HTML文档
+
+libdir: HTML依赖的包的路径
+
+background: HTML背景色
+
+title: 产生主页的标题
+
+knitrOptions: 一个knitr代码块的选项列表
+
+\subsection{scaffoldWidget}\label{scaffoldwidget}
+
+为HTML控件创建实现脚手架
+
+\begin{quote}
+\textbf{描述}
+\end{quote}
+
+将一个HTML控件实现的最小代码添加到一个R包中。这个函数必须从要添加小部件的包的根目录中执行。
+
+\begin{quote}
+\textbf{用法}
+\end{quote}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{scaffoldWidget}\NormalTok{(name, }\DataTypeTok{bowerPkg =} \OtherTok{NULL}\NormalTok{, }\DataTypeTok{edit =} \KeywordTok{interactive}\NormalTok{())}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{quote}
+\textbf{参数}
+\end{quote}
+
+name: 控件的名称
+
+bowerPkg:
+这个控件基于Bower包的可选名称。如果您指定这个参数然后Bower将被用来自动下载控件。源代码和依赖项，并将它们添加到小部件的YAML中。
+
+edit: 在创建脚手架后，自动打开控件的JavaScript源文件。
+
+\subsection{setWidgetIdSeed}\label{setwidgetidseed}
+
+为控件元素ID设置随机种子
+
+\begin{quote}
+\textbf{描述}
+\end{quote}
+
+设置用于生成控件元素ID的随机种子。调用这个函数而不是依赖
+默认行为确保跨会话的稳定控件ID。
+
+\begin{quote}
+\textbf{用法}
+\end{quote}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{setWidgetIdSeed}\NormalTok{(seed, }\DataTypeTok{kind =} \OtherTok{NULL}\NormalTok{, }\DataTypeTok{normal.kind =} \OtherTok{NULL}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{quote}
+\textbf{参数}
+\end{quote}
+
+seed: 一个值，整数或者为NULL
+
+kind: character or NULL
+
+normal.kind: character string or NULL.
+
+\subsection{sizingPolicy}\label{sizingpolicy}
+
+创建一个空间大小调整策略
+
+\begin{quote}
+\textbf{描述}
+\end{quote}
+
+Define the policy by which HTML widgets will be sized in various
+containers (e.g.~Browser, RStudio Viewer, R Markdown, Shiny). Note that
+typically widgets can accept the default sizing policy (or override only
+one or two aspects of it) and get satisfactory sizing behavior via the
+automatic sizing logic built into the htmlwidgets framework (see the
+notes below for the most typical exceptions to this).
+
+\begin{quote}
+\textbf{用法}
+\end{quote}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{sizingPolicy}\NormalTok{(}\DataTypeTok{defaultWidth =} \OtherTok{NULL}\NormalTok{, }\DataTypeTok{defaultHeight =} \OtherTok{NULL}\NormalTok{, }\DataTypeTok{padding =} \OtherTok{NULL}\NormalTok{,}
+  \DataTypeTok{viewer.defaultWidth =} \OtherTok{NULL}\NormalTok{, }\DataTypeTok{viewer.defaultHeight =} \OtherTok{NULL}\NormalTok{,}
+  \DataTypeTok{viewer.padding =} \OtherTok{NULL}\NormalTok{, }\DataTypeTok{viewer.fill =} \OtherTok{TRUE}\NormalTok{, }\DataTypeTok{viewer.suppress =} \OtherTok{FALSE}\NormalTok{,}
+  \DataTypeTok{viewer.paneHeight =} \OtherTok{NULL}\NormalTok{, }\DataTypeTok{browser.defaultWidth =} \OtherTok{NULL}\NormalTok{,}
+  \DataTypeTok{browser.defaultHeight =} \OtherTok{NULL}\NormalTok{, }\DataTypeTok{browser.padding =} \OtherTok{NULL}\NormalTok{,}
+  \DataTypeTok{browser.fill =} \OtherTok{FALSE}\NormalTok{, }\DataTypeTok{browser.external =} \OtherTok{FALSE}\NormalTok{,}
+  \DataTypeTok{knitr.defaultWidth =} \OtherTok{NULL}\NormalTok{, }\DataTypeTok{knitr.defaultHeight =} \OtherTok{NULL}\NormalTok{,}
+  \DataTypeTok{knitr.figure =} \OtherTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{quote}
+\textbf{参数}
+\end{quote}
+
+defaultWidth: The default width used to display the widget. This
+parameter specifies the defaultwidth for viewing in all contexts
+(browser, viewer, and knitr) unless it is specifically overridden with
+e.g.~browser.defaultWidth.
+
+defaultHeight: The default height used to display the widget. This
+parameter specifies the default height for viewing in all contexts
+(browser, viewer, and knitr) unless it is specifically overridden with
+e.g.~browser.defaultHeight
+
+padding: Padding around the widget (in pixels). This parameter specifies
+the padding for viewing in all contexts (browser and viewer) unless it
+is specifically overriden by e.g.~browser.padding.
+
+viewer.defaultWidth: The default width used to display the widget within
+the RStudio Viewer
+
+viewer.defaultHeight: The default height used to display the widget
+within the RStudio Viewer.
+
+viewer.padding: Padding around the widget when displayed in the RStudio
+Viewer (defaults to 15 pixels).
+
+viewer.fill: When displayed in the RStudio Viewer, automatically size
+the widget to the viewer dimensions (note that viewer.padding is still
+applied). Default to TRUE.
+
+viewer.suppress: Never display the widget within the RStudio Viewer
+(useful for widgets that require a large amount of space for rendering).
+Defaults to FALSE.
+
+viewer.paneHeight: Request that the RStudio Viewer be forced to a
+specific height when displaying this widget.
+
+browser.defaultWidth: The default width used to display the widget
+within a standalone web browser.
+
+browser.defaultHeight: The default height used to display the widget
+within a standalone web browser.
+
+browser.padding: Padding around the widget when displayed in a
+standalone browser (defaults to 40 pixels).
+
+browser.fill: When displayed in a standalone web browser, automatically
+size the widget tothe browser dimensions (note that browser.padding is
+still applied). Defaults to FALSE.
+
+browser.external: When displaying in a browser, always use an external
+browser (via browseURL()). Defaults to FALSE, which will result in the
+use of an internal browser within RStudio v1.1 and higher.
+
+knitr.defaultWidth: The default width used to display the widget within
+documents generated by knitr (e.g.~R Markdown).
+
+knitr.figure: Apply the default knitr fig.width and fig.height to the
+widget when it's rendered within R Markdown documents. Defaults to TRUE.
+
+\begin{quote}
+\textbf{细节}
+\end{quote}
+
+The default HTML widget sizing policy treats the widget with the same
+sizing semantics as an R plot. When printed at the R console the widget
+is displayed within the RStudio Viewer and sized to fill the Viewer pane
+(modulo any padding). When rendered inside an R Markdown document the
+widget is sized based on the default size of figures in the document.
+
+You might need to change the default behavior if your widget is
+extremely large. In this case you might specify viewer.suppress = TRUE
+and knitr.figure = FALSE as well provide for a larger default width and
+height for knitr.
+
+You also might need to change the default behavior if you widget already
+incorporates padding. Inthis case you might specify viewer.padding = 0.
+For additional details on widget sizing:vignette(``develop\_sizing'',
+package = ``htmlwidgets'')
+
+相关细节可以参考第二章
+
+\begin{quote}
+\textbf{值}
+\end{quote}
+
+一个控件大小的调整策略
 
 \chapter{总结}\label{summary}
 
